@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>主菜单</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>抽样分布</string>
+    </property>
+    <widget class="QMenu" name="menu_6">
+     <property name="title">
+      <string>三大抽样分布</string>
+     </property>
+     <addaction name="action_Sd_chi"/>
+     <addaction name="action_Sd_t"/>
+     <addaction name="action_Sd_F"/>
+    </widget>
+    <widget class="QMenu" name="menu_7">
+     <property name="title">
+      <string>正态总体下统计量</string>
+     </property>
+     <addaction name="action_Sd_SingleNormal"/>
+     <addaction name="action_Sd_DoubleNormal"/>
+    </widget>
+    <addaction name="menu_6"/>
+    <addaction name="menu_7"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>参数估计</string>
+    </property>
+    <widget class="QMenu" name="menu_12">
+     <property name="title">
+      <string>参数的区间估计</string>
+     </property>
+     <addaction name="Simple_m_confidence_interval_action"/>
+     <addaction name="action_double_confidence_interval"/>
+    </widget>
+    <addaction name="menu_12"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>假设检验</string>
+    </property>
+    <widget class="QMenu" name="menu_9">
+     <property name="title">
+      <string>参数检验</string>
+     </property>
+     <addaction name="action_a"/>
+     <addaction name="action_16"/>
+    </widget>
+    <widget class="QMenu" name="menu_10">
+     <property name="title">
+      <string>非参数检验</string>
+     </property>
+     <addaction name="action_18"/>
+     <addaction name="action_dulixingjianyan"/>
+    </widget>
+    <addaction name="menu_9"/>
+    <addaction name="menu_10"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>回归分析</string>
+    </property>
+    <addaction name="action_Linear_regression"/>
+    <addaction name="action_Nonlinear_regression"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="action_Sd_chi">
+   <property name="text">
+    <string>卡方分布</string>
+   </property>
+  </action>
+  <action name="action_Sd_t">
+   <property name="text">
+    <string>t分布</string>
+   </property>
+  </action>
+  <action name="action_Sd_F">
+   <property name="text">
+    <string>F-分布</string>
+   </property>
+  </action>
+  <action name="action_Sd_SingleNormal">
+   <property name="text">
+    <string>单个正态总体统计量的分布</string>
+   </property>
+  </action>
+  <action name="action_Sd_DoubleNormal">
+   <property name="text">
+    <string>两个正态总体统计量的分布</string>
+   </property>
+  </action>
+  <action name="action_6">
+   <property name="text">
+    <string>矩法</string>
+   </property>
+  </action>
+  <action name="action_7">
+   <property name="text">
+    <string>最大似然法</string>
+   </property>
+  </action>
+  <action name="action_11">
+   <property name="text">
+    <string>无序性</string>
+   </property>
+  </action>
+  <action name="action_12">
+   <property name="text">
+    <string>有效性</string>
+   </property>
+  </action>
+  <action name="action_13">
+   <property name="text">
+    <string>一致性</string>
+   </property>
+  </action>
+  <action name="action_a">
+   <property name="text">
+    <string>单个正态总体的检验</string>
+   </property>
+  </action>
+  <action name="action_16">
+   <property name="text">
+    <string>两个正态总体的检验</string>
+   </property>
+  </action>
+  <action name="action_18">
+   <property name="text">
+    <string>分布函数拟合检验</string>
+   </property>
+  </action>
+  <action name="action_dulixingjianyan">
+   <property name="text">
+    <string>独立性检验</string>
+   </property>
+  </action>
+  <action name="action_Linear_regression">
+   <property name="text">
+    <string>直线回归</string>
+   </property>
+  </action>
+  <action name="action_22">
+   <property name="text">
+    <string>双曲线</string>
+   </property>
+  </action>
+  <action name="action_23">
+   <property name="text">
+    <string>幂函数</string>
+   </property>
+  </action>
+  <action name="action_24">
+   <property name="text">
+    <string>指数</string>
+   </property>
+  </action>
+  <action name="action_25">
+   <property name="text">
+    <string>对数</string>
+   </property>
+  </action>
+  <action name="actions">
+   <property name="text">
+    <string>s形曲线</string>
+   </property>
+  </action>
+  <action name="action_26">
+   <property name="text">
+    <string>抛物线</string>
+   </property>
+  </action>
+  <action name="Simple_m_confidence_interval_action">
+   <property name="text">
+    <string>单个正态分布总体</string>
+   </property>
+  </action>
+  <action name="action_double_confidence_interval">
+   <property name="text">
+    <string>两个正态分布总体</string>
+   </property>
+  </action>
+  <action name="action0_1">
+   <property name="text">
+    <string>0-1</string>
+   </property>
+  </action>
+  <action name="action_Nonlinear_regression">
+   <property name="text">
+    <string>曲线回归</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
