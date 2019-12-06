@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 """
-Module implementing Supposetwo.
+Module implementing Supposetwo. 
 """
 
-from PyQt5.QtCore import pyqtSlot
+from PyQt5.QtCore import pyqtSlot     #修改注释
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QPixmap, QPainter
 from Ui_canshujiashejianyan_two import Ui_Supposetwo
