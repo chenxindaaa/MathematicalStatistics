@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Project SYSTEM "Project-5.1.dtd">
+<!-- eric project file for project mathematical _statistics -->
+<!-- Saved: 2019-10-19, 22:12:21 -->
+<!-- Copyright (C) 2019 ,  -->
+<Project version="5.1">
+  <Language></Language>
+  <Hash>80b8f3aedcfd59c82d0f57bc3867bb1b04e70f93</Hash>
+  <ProgLanguage mixed="0">Python3</ProgLanguage>
+  <ProjectType>PyQt5</ProjectType>
+  <Version>0.1</Version>
+  <Author></Author>
+  <Email></Email>
+  <Eol index="0"/>
+  <Sources>
+    <Source>Myfiles/FI_canshujiashejianyan_two.py</Source>
+    <Source>Myfiles/Fl_FenbuhanshuNihe.py</Source>
+    <Source>Myfiles/Fl_Linear_regression.py</Source>
+    <Source>Myfiles/Fl_MainWindow.py</Source>
+    <Source>Myfiles/Fl_Nonlinear_regression.py</Source>
+    <Source>Myfiles/Fl_Sd_DoubleNormal.py</Source>
+    <Source>Myfiles/Fl_Sd_SingleNormal.py</Source>
+    <Source>Myfiles/Fl_Sd_chi.py</Source>
+    <Source>Myfiles/Fl_Sd_f.py</Source>
+    <Source>Myfiles/Fl_Sd_t.py</Source>
+    <Source>Myfiles/Fl_Simple_m_confidence_interval_.py</Source>
+    <Source>Myfiles/Fl_canshujiashejianyan.py</Source>
+    <Source>Myfiles/Fl_double_confidence_interval.py</Source>
+    <Source>Myfiles/Fl_dulixingjianyan.py</Source>
+    <Source>Myfiles/Plot.py</Source>
+    <Source>Myfiles/Ui_FenbuhanshuNihe.py</Source>
+    <Source>Myfiles/Ui_Linear_regression.py</Source>
+    <Source>Myfiles/Ui_MainWindow.py</Source>
+    <Source>Myfiles/Ui_Nonlinear_regression.py</Source>
+    <Source>Myfiles/Ui_Sd_DoubleNormal.py</Source>
+    <Source>Myfiles/Ui_Sd_SingleNormal.py</Source>
+    <Source>Myfiles/Ui_Sd_chi.py</Source>
+    <Source>Myfiles/Ui_Sd_f.py</Source>
+    <Source>Myfiles/Ui_Sd_t.py</Source>
+    <Source>Myfiles/Ui_Simple_m_confidence_interval_.py</Source>
+    <Source>Myfiles/Ui_canshujiashejianyan.py</Source>
+    <Source>Myfiles/Ui_canshujiashejianyan_two.py</Source>
+    <Source>Myfiles/Ui_double_confidence_interval.py</Source>
+    <Source>Myfiles/Ui_dulixingjianyan.py</Source>
+    <Source>__init__.py</Source>
+  </Sources>
+  <Forms>
+    <Form>Myfiles/FenbuhanshuNihe.ui</Form>
+    <Form>Myfiles/Linear_regression.ui</Form>
+    <Form>Myfiles/MainWindow.ui</Form>
+    <Form>Myfiles/Nonlinear_regression.ui</Form>
+    <Form>Myfiles/Sd_DoubleNormal.ui</Form>
+    <Form>Myfiles/Sd_SingleNormal.ui</Form>
+    <Form>Myfiles/Sd_chi.ui</Form>
+    <Form>Myfiles/Sd_f.ui</Form>
+    <Form>Myfiles/Sd_t.ui</Form>
+    <Form>Myfiles/Simple_m_confidence_interval_.ui</Form>
+    <Form>Myfiles/canshujiashejianyan.ui</Form>
+    <Form>Myfiles/canshujiashejianyan_two.ui</Form>
+    <Form>Myfiles/double_confidence_interval.ui</Form>
+    <Form>Myfiles/dulixingjianyan.ui</Form>
+  </Forms>
+  <Translations/>
+  <Resources/>
+  <Interfaces/>
+  <Others/>
+  <Vcs>
+    <VcsType>None</VcsType>
+  </Vcs>
+  <FiletypeAssociations>
+    <FiletypeAssociation pattern="*.e4p" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.idl" type="INTERFACES"/>
+    <FiletypeAssociation pattern="*.md" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.py" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.py3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.pyw3" type="SOURCES"/>
+    <FiletypeAssociation pattern="*.qm" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.qrc" type="RESOURCES"/>
+    <FiletypeAssociation pattern="*.rst" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.ts" type="TRANSLATIONS"/>
+    <FiletypeAssociation pattern="*.txt" type="OTHERS"/>
+    <FiletypeAssociation pattern="*.ui" type="FORMS"/>
+    <FiletypeAssociation pattern="README" type="OTHERS"/>
+    <FiletypeAssociation pattern="README.*" type="OTHERS"/>
+  </FiletypeAssociations>
+</Project>
