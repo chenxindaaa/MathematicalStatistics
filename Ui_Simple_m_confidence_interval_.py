@@ -1,11 +1,11 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\Simple_m_confidence_interval_.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
 # WARNING! All changes made in this file will be lost!
-
+#YTTTTTT
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Simple_m_confidence_interval_Form(object):
