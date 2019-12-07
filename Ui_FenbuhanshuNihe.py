@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\FenbuhanshuNihe.ui'
+# Form implementation generated from reading ui file 'C:\Users\hehuibin\Desktop\MathematicalStatistics\FenbuhanshuNihe.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -13,7 +13,11 @@ class Ui_FenbuhanshuNihe_Form(object):
         FenbuhanshuNihe_Form.setObjectName("FenbuhanshuNihe_Form")
         FenbuhanshuNihe_Form.resize(751, 560)
         self.label = QtWidgets.QLabel(FenbuhanshuNihe_Form)
-        self.label.setGeometry(QtCore.QRect(60, 30, 111, 16))
+        self.label.setGeometry(QtCore.QRect(30, 30, 141, 21))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        self.label.setFont(font)
         self.label.setObjectName("label")
         self.lineEdit = QtWidgets.QLineEdit(FenbuhanshuNihe_Form)
         self.lineEdit.setGeometry(QtCore.QRect(190, 30, 411, 21))
@@ -23,9 +27,17 @@ class Ui_FenbuhanshuNihe_Form(object):
         self.widget.setObjectName("widget")
         self.pushButton = QtWidgets.QPushButton(self.widget)
         self.pushButton.setGeometry(QtCore.QRect(60, 80, 111, 28))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.label_2 = QtWidgets.QLabel(self.widget)
-        self.label_2.setGeometry(QtCore.QRect(60, 20, 151, 31))
+        self.label_2.setGeometry(QtCore.QRect(60, 20, 171, 31))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        self.label_2.setFont(font)
         self.label_2.setObjectName("label_2")
         self.lineEdit_2 = QtWidgets.QLineEdit(self.widget)
         self.lineEdit_2.setGeometry(QtCore.QRect(250, 80, 91, 31))
@@ -35,9 +47,17 @@ class Ui_FenbuhanshuNihe_Form(object):
         self.widget_2.setObjectName("widget_2")
         self.pushButton_2 = QtWidgets.QPushButton(self.widget_2)
         self.pushButton_2.setGeometry(QtCore.QRect(60, 80, 111, 28))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.label_3 = QtWidgets.QLabel(self.widget_2)
-        self.label_3.setGeometry(QtCore.QRect(60, 20, 151, 31))
+        self.label_3.setGeometry(QtCore.QRect(60, 20, 171, 31))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        self.label_3.setFont(font)
         self.label_3.setObjectName("label_3")
         self.lineEdit_3 = QtWidgets.QLineEdit(self.widget_2)
         self.lineEdit_3.setGeometry(QtCore.QRect(250, 80, 91, 31))

@@ -37,7 +37,7 @@ class FenbuhanshuNihe_Form(QWidget, Ui_FenbuhanshuNihe_Form):
         Slot documentation goes here.
         """
         a=self.lineEdit.text()
-        book = load_workbook(filename=a + ".xlsx")
+        book = load_workbook( filename=a )
         sheet = book.get_sheet_by_name("Sheet1")
         data=[]
         row_num=1

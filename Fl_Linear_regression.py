@@ -7,6 +7,7 @@ from PyQt5.QtGui import QIcon, QPixmap, QPainter
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget, QApplication,  QMessageBox
 from Ui_Linear_regression import Ui_Linear_regression_Form
+from scipy.stats import f
 
 class Form(QWidget, Ui_Linear_regression_Form):
     """
@@ -39,8 +40,8 @@ class Form(QWidget, Ui_Linear_regression_Form):
             x=list(map(float, self.lineEdit_5.text().strip().split(' ')))
             y=list(map(float, self.lineEdit_6.text().strip().split(' ')))
             parameter=self.widget.mpl.liner_fitting(x, y)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_2.setText(str(parameter[1]))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_2.setText(str("{:.6f}".format(parameter[1])))
         except (IndexError,  ValueError):
             QMessageBox.information(self, "标题", "请输入数字并且保证x与y数量一致！(用一个空格间隔)", QMessageBox.Cancel)
     
@@ -64,6 +65,39 @@ class Form(QWidget, Ui_Linear_regression_Form):
         """
         Slot documentation goes here.
         """
+        x=list(map(float, self.lineEdit_5.text().strip().split(' ')))
+        y=list(map(float, self.lineEdit_6.text().strip().split(' ')))
+        parameter=self.widget.mpl.liner_fitting(x, y)
+        data=list(map(float, self.lineEdit_3.text().strip().split(' ')))
+        draw_data = self.widget.mpl.calculate(data,parameter[0],parameter[1])
+        self.lineEdit_4.setText(str("{:.3f}".format(draw_data[0])))
+        
+    @pyqtSlot()
+    def on_pushButton_4_clicked(self):
+        Alpha=float(self.lineEdit_7.text())
+        x=list(map(float, self.lineEdit_5.text().strip().split(' ')))
+        y=list(map(float, self.lineEdit_6.text().strip().split(' ')))
+        parameter=self.widget.mpl.liner_fitting(x, y)
+        draw_data = self.widget.mpl.calculate(x,parameter[0],parameter[1])
+        n=len(x)
+        sum=0
+        SSR=0
+        SSE=0
+        for i in range(0, n):
+            sum+=y[i]
+        y_=sum/n
+        for i in range(0, n):
+            SSR+=(draw_data[i]-y_)**2
+            SSE+=(y[i]-draw_data[i])**2
+        F=SSR/SSE*(n-2)
+        self.lineEdit_8.setText(str("{:.6f}".format(F)))
+        F_=f.ppf(1-Alpha,dfn=1,dfd=n-2)
+        self.lineEdit_9.setText(str("{:.6f}".format(F_)))
+        if F>F_:
+            self.lineEdit_10.setText(str(1))
+        else:
+            self.lineEdit_10.setText(str(0))
+    
         
 if __name__ == "__main__":
     import sys
