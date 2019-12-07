@@ -24,6 +24,8 @@ class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
         self.setupUi(self)
         self.widget.setVisible(False)
         self.setWindowIcon(QIcon('./image/icon.png')) 
+        self.a = 0.8
+        self.b = 0.2
     
     def paintEvent(self,event):
         painter = QPainter(self)
@@ -63,7 +65,9 @@ class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
             self.widget.mpl.start_chi_plot(chi_n)
-        self.widget.mpl.fill_chi_plot(chi_n, quantile)
+        self.widget.mpl.fill_chi_plot(chi_n, quantile,  self.a,  self.b)
+        self.a -= 0.05
+        self.b += 0.05
         
 if __name__ == "__main__":
     import sys

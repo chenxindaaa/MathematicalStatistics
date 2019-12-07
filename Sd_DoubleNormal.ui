@@ -6,9 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>991</width>
-    <height>600</height>
+    <width>1123</width>
+    <height>615</height>
    </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>12</pointsize>
+   </font>
   </property>
   <property name="windowTitle">
    <string>两个正态总体抽样分布</string>
@@ -16,115 +21,24 @@
   <widget class="Plot" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>180</y>
+     <x>110</x>
+     <y>190</y>
      <width>901</width>
      <height>391</height>
     </rect>
    </property>
   </widget>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QWidget" name="">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>120</y>
-     <width>901</width>
-     <height>30</height>
+     <y>41</y>
+     <width>1045</width>
+     <height>137</height>
     </rect>
    </property>
-   <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
-     <widget class="QPushButton" name="pushButton">
-      <property name="text">
-       <string>已知方差σ2的两总体的样本均值的分布</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_2">
-      <property name="text">
-       <string>已知方差σ2的两总体的样本方差比的分布</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="pushButton_3">
-      <property name="text">
-       <string>方差σ2相等的两总体的样本均值方差比的分布</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>40</y>
-     <width>901</width>
-     <height>23</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="text">
-       <string>样本容量n1</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QSpinBox" name="spinBox_n1">
-      <property name="minimum">
-       <number>2</number>
-      </property>
-      <property name="maximum">
-       <number>999999999</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_5">
-      <property name="text">
-       <string>样本容量n2</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QSpinBox" name="spinBox_n2">
-      <property name="minimum">
-       <number>2</number>
-      </property>
-      <property name="maximum">
-       <number>999999999</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="text">
-       <string>抽样次数m1</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QSpinBox" name="spinBox_m1">
-      <property name="minimum">
-       <number>1</number>
-      </property>
-      <property name="maximum">
-       <number>999999999</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_6">
-      <property name="text">
-       <string>抽样次数m2</string>
-      </property>
-     </widget>
-    </item>
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="7">
      <widget class="QSpinBox" name="spinBox_m2">
       <property name="minimum">
        <number>1</number>
@@ -134,28 +48,109 @@
       </property>
      </widget>
     </item>
-   </layout>
-  </widget>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>40</x>
-     <y>80</y>
-     <width>909</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <layout class="QHBoxLayout" name="horizontalLayout_3">
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_4">
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_5">
+      <property name="text">
+       <string>样本容量n2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QSpinBox" name="spinBox_n1">
+      <property name="minimum">
+       <number>2</number>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="3">
+     <widget class="QSpinBox" name="spinBox_n2">
+      <property name="minimum">
+       <number>2</number>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="label">
+      <property name="text">
+       <string>样本容量n1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="6">
+     <widget class="QLabel" name="label_6">
+      <property name="text">
+       <string>抽样次数m2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="4">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>抽样次数m1</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="5">
+     <widget class="QSpinBox" name="spinBox_m1">
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>999999999</number>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="8">
+     <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QLabel" name="label_7">
+       <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>mu1</string>
+         <string>已知方差的两总体的样本均值的分布</string>
         </property>
        </widget>
       </item>
       <item>
+       <widget class="QPushButton" name="pushButton_2">
+        <property name="text">
+         <string>已知方差的两总体的样本方差比的分布</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_3">
+        <property name="text">
+         <string>方差相等的两总体的样本方差比的分布</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="1" colspan="6">
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="3">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>σ1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1" colspan="2">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_mu2">
+        <property name="minimum">
+         <double>-9999999999999999635896294965248.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>9999999999999999583119736832.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="2">
        <widget class="QDoubleSpinBox" name="doubleSpinBox_mu1">
         <property name="minimum">
          <double>-9999999999999999635896294965248.000000000000000</double>
@@ -165,14 +160,38 @@
         </property>
        </widget>
       </item>
-      <item>
-       <widget class="QLabel" name="label_8">
+      <item row="1" column="3">
+       <widget class="QLabel" name="label_4">
         <property name="text">
-         <string>sigema1</string>
+         <string>σ2</string>
         </property>
        </widget>
       </item>
-      <item>
+      <item row="0" column="0" colspan="2">
+       <widget class="QLabel" name="label_7">
+        <property name="text">
+         <string>μ1</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="text">
+         <string>μ2</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="4">
+       <widget class="QDoubleSpinBox" name="doubleSpinBox_sigma2">
+        <property name="minimum">
+         <double>0.000000000000000</double>
+        </property>
+        <property name="maximum">
+         <double>9999999999999999583119736832.000000000000000</double>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="4">
        <widget class="QDoubleSpinBox" name="doubleSpinBox_sigma1">
         <property name="minimum">
          <double>0.000000000000000</double>
@@ -184,40 +203,6 @@
       </item>
      </layout>
     </item>
-    <item>
-     <widget class="QLabel" name="label_3">
-      <property name="text">
-       <string>mu2</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_mu2">
-      <property name="minimum">
-       <double>-9999999999999999635896294965248.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>9999999999999999583119736832.000000000000000</double>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_4">
-      <property name="text">
-       <string>sigema2</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QDoubleSpinBox" name="doubleSpinBox_sigma2">
-      <property name="minimum">
-       <double>0.000000000000000</double>
-      </property>
-      <property name="maximum">
-       <double>9999999999999999583119736832.000000000000000</double>
-      </property>
-     </widget>
-    </item>
    </layout>
   </widget>
  </widget>
@@ -225,7 +210,7 @@
   <customwidget>
    <class>Plot</class>
    <extends>QWidget</extends>
-   <header location="global">Plot.h</header>
+   <header>Plot.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

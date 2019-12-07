@@ -24,6 +24,8 @@ class Sd_t_Form(QWidget, Ui_Sd_t_Form):
         self.setupUi(self)
         self.widget.setVisible(False)
         self.setWindowIcon(QIcon('./image/icon.png'))
+        self.a = 0.8
+        self.b = 0.2
     
     def paintEvent(self,event):
         painter = QPainter(self)
@@ -40,7 +42,7 @@ class Sd_t_Form(QWidget, Ui_Sd_t_Form):
         self.widget.setVisible(True)  
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
-        self.widget.mpl.start_t_plot(t_n)
+        self.widget.mpl.start_t_plot(t_n,  self.radioButton.isChecked())
         
     @pyqtSlot()
     def on_pushButton_t_quantile_clicked(self):
@@ -62,8 +64,10 @@ class Sd_t_Form(QWidget, Ui_Sd_t_Form):
         quantile=stats.t.isf(arfa, t_n)
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
-            self.widget.mpl.start_t_plot(t_n)
-        self.widget.mpl.fill_t_plot(t_n, quantile)
+            self.widget.mpl.start_t_plot(t_n,  self.radioButton.isChecked())
+        self.widget.mpl.fill_t_plot(t_n, quantile, self.a, self.b)
+        self.a -= 0.05
+        self.b += 0.05
         
 if __name__ == "__main__":
     import sys

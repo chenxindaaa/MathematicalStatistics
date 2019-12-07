@@ -34,10 +34,12 @@ class MyMplCanvas(FigureCanvas):
         FigureCanvas.setSizePolicy(self,QSizePolicy.Expanding,QSizePolicy.Expanding)
         FigureCanvas.updateGeometry(self)
 
-    def fill_chi_plot(self, chi_n, quantile):
+    def fill_chi_plot(self, chi_n, quantile,  a,  b):
         c1 = stats.chi2.isf(0.0000001,  chi_n)
         x=np.linspace(quantile,c1, 100 )
         self.axes.fill_between(x, stats.chi2.pdf(x,chi_n), alpha=0.5)
+        arrowprops = dict(arrowstyle = "->", connectionstyle = "angle,angleA=0,angleB=45,rad=10")
+        self.axes.annotate('%f' % quantile, xy=(quantile, 0), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
         self.draw()
         
     def fill_chi2_plot1(self,a,N):
@@ -59,9 +61,11 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.chi2.pdf(x, N),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.draw()
     
-    def fill_t_plot(self,t_n, quantile):
+    def fill_t_plot(self,t_n, quantile, a,  b):
         x=np.linspace(quantile,5, 100 )
         self.axes.fill_between(x, stats.t.pdf(x,t_n), alpha=0.5)
+        arrowprops = dict(arrowstyle = "->", connectionstyle = "angle,angleA=0,angleB=45,rad=10")
+        self.axes.annotate('%f' % quantile, xy=(quantile, 0), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
         self.draw()
         
     def fill_t_plot1(self, a, N):
@@ -72,9 +76,11 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.t.pdf(x, N),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.draw()
         
-    def fill_f_plot(self, f_m, f_n,  quantile):
+    def fill_f_plot(self, f_m, f_n,  quantile,  a,  b):
         x=np.linspace(quantile,7, 100 )
         self.axes.fill_between(x, stats.f.pdf(x,f_m, f_n), alpha=0.5)
+        arrowprops = dict(arrowstyle = "->", connectionstyle = "angle,angleA=0,angleB=45,rad=10")
+        self.axes.annotate('%f' % quantile, xy=(quantile, 0), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
         self.draw()
         
     def fill_f_plot1(self, a, N1, N2):
@@ -105,11 +111,11 @@ class MyMplCanvas(FigureCanvas):
         self.draw()
 
     def start_chi_plot(self, chi_n):
-        self.fig.suptitle('n为'+str(chi_n)+'的卡方分布')
+        self.fig.suptitle('n为'+str(int(chi_n))+'的卡方分布')
         c2=stats.chi2.isf(0.0000001, chi_n)
         c1 = stats.chi2.isf(0.9999999,  chi_n)
         x = np.linspace( c1, c2, 100)
-        self.axes.plot(x, stats.chi2.pdf(x,chi_n), label='n='+str(chi_n))
+        self.axes.plot(x, stats.chi2.pdf(x,chi_n), label='n='+str(int(chi_n)))
         self.axes.set_ylabel('Y轴')
         self.axes.set_xlabel('X轴')
         self.axes.grid(True)
@@ -121,7 +127,7 @@ class MyMplCanvas(FigureCanvas):
         c2=stats.chi2.isf(0.0000001, N)
         c1 = stats.chi2.isf(0.9999999,  N)
         x=np.linspace(c1,c2,100)
-        self.axes.plot(x,stats.chi2.pdf(x,N), label='自由度='+str(N))
+        self.axes.plot(x,stats.chi2.pdf(x,N), label='自由度='+str(int(N)))
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('y')
         self.axes.grid(True)
@@ -131,7 +137,7 @@ class MyMplCanvas(FigureCanvas):
         
     def start_f_plot(self,N1, N2): 
         x=np.linspace(0,7,100)
-        self.axes.plot(x,stats.f.pdf(x, N1, N2), label='自由度='+str(N1)+str(", ")+str(N2))
+        self.axes.plot(x,stats.f.pdf(x, N1, N2), label="$f(n_1, n_2)$")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('y')
         self.axes.grid(True)
@@ -139,11 +145,12 @@ class MyMplCanvas(FigureCanvas):
         self.axes.legend()
         self.draw()
         
-    def start_t_plot(self, t_n):
-        self.fig.suptitle('n为'+str(t_n)+'的t分布')
+    def start_t_plot(self, t_n, flag):
+        self.fig.suptitle('n为'+str(int(t_n))+'的t分布')
         x = np.linspace( -5, 5, 100)
-        self.axes.plot(x, stats.norm.pdf(x), label='normal')
-        self.axes.plot(x,stats.t.pdf(x, t_n), label='n='+str(t_n))
+        if flag:
+            self.axes.plot(x, stats.norm.pdf(x), label='normal')
+        self.axes.plot(x,stats.t.pdf(x, t_n), label='n='+str(int(t_n)))
         self.axes.set_ylabel('Y轴')
         self.axes.set_xlabel('X轴')
         self.axes.grid(True)
@@ -209,7 +216,7 @@ class MyMplCanvas(FigureCanvas):
         self.axes.plot(x, stats.norm.pdf(x),"b", label="N(0,1)")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('pdf')
-        self.fig.suptitle("方差sigma2已知时,样本均值的抽样分布")
+        self.fig.suptitle("方差$\sigma^2$已知时,样本均值的抽样分布")
         self.axes.legend()
         self.draw()  
     
@@ -226,7 +233,7 @@ class MyMplCanvas(FigureCanvas):
         self.axes.plot(x, stats.t.pdf(x, n-1),"r", label="t(n-1)")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('pdf')
-        self.fig.suptitle("方差sigma2未知时,样本均值的抽样分布")
+        self.fig.suptitle("方差$\sigma^2$未知时,样本均值的抽样分布")
         self.axes.legend()
         self.draw()
 
@@ -242,7 +249,7 @@ class MyMplCanvas(FigureCanvas):
         self.axes.plot(x, stats.chi2.pdf(x, n-1),"b", label="$\chi2(n-1)$")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('pdf')
-        self.fig.suptitle("方差 S^2 的抽样分布")
+        self.fig.suptitle("方差$S^2$的抽样分布")
         self.axes.legend()
         self.draw()
     
@@ -255,13 +262,13 @@ class MyMplCanvas(FigureCanvas):
         S1=np.array(zhen1).flatten()
         S2=np.array(zhen2).flatten()
         F=(S1*sigma2*sigma2)/(S2*sigma1*sigma1)
-        c2=stats.f.isf(0.001, n1-1,n2-1)
+        c2=stats.f.isf(0.005, n1-1,n2-1)
         x=np.linspace(0, c2, 100)
         N, bins, patches =self.axes.hist(F, 100, density=1, facecolor="yellow", edgecolor="black", alpha=0.7)
         self.axes.plot(x, stats.f.pdf(x, n1-1,n2-1),"b", label="F(n1-1,n2-1)")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('pdf')
-        self.fig.suptitle("已知方差σ2的两总体的样本方差比的分布")
+        self.fig.suptitle("已知方差$σ^2$的两总体的样本方差比的分布")
         self.axes.legend()
         self.draw()
         
@@ -286,7 +293,7 @@ class MyMplCanvas(FigureCanvas):
         self.axes.plot(x, stats.t.pdf(x, n1+n2-2),"b", label="t(n1+n2-2)")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('pdf')
-        self.fig.suptitle("方差σ2相等的两总体的样本均值方差比的分布")
+        self.fig.suptitle("方差$σ^2$相等的两总体的样本方差比的分布")
         self.axes.legend()
         self.draw()
 
@@ -305,7 +312,7 @@ class MyMplCanvas(FigureCanvas):
         self.axes.plot(x, stats.norm.pdf(x, 0,1),"b", label="N(0,1)")
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('pdf')
-        self.fig.suptitle("已知方差σ2的两总体的样本均值的分布")
+        self.fig.suptitle("已知方差$σ^2$的两总体的样本均值的分布")
         self.axes.legend()
         self.draw()
         
