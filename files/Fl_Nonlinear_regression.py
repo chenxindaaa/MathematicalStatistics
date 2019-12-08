@@ -50,8 +50,8 @@ class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
                 y1.append(float(math.log(y[i])))
                 i+=1
             parameter=self.widget_2.mpl.liner_fitting(x1, y1)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_4.setText(str(math.exp(parameter[1])))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_4.setText(str("{:.6f}".format(math.exp(parameter[1]))))
             j=0
             Y=[]
             while j<size:
@@ -81,8 +81,8 @@ class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
                 y1.append(float(1/y[i]))
                 i+=1
             parameter=self.widget_2.mpl.liner_fitting(x1, y1)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_4.setText(str(parameter[1]))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_4.setText(str("{:.6f}".format(parameter[1])))
             j=0
             Y=[]
             while j<size:
@@ -112,8 +112,8 @@ class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
                 y1.append(float(math.log(y[i])))
                 i+=1
             parameter=self.widget_2.mpl.liner_fitting(x1, y1)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_4.setText(str(math.exp(parameter[1])))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_4.setText(str("{:.6f}".format(math.exp(parameter[1]))))
             j=0
             Y=[]
             while j<size:
@@ -141,8 +141,8 @@ class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
                 y1.append(float(math.log(y[i])))
                 i+=1
             parameter=self.widget_2.mpl.liner_fitting(x, y1)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_4.setText(str(math.exp(parameter[1])))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_4.setText(str("{:.6f}".format(math.exp(parameter[1]))))
             j=0
             Y=[]
             while j<size:
@@ -170,8 +170,8 @@ class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
                 x1.append(float(math.log(x[i])))
                 i+=1
             parameter=self.widget_2.mpl.liner_fitting(x1, y)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_4.setText(str(parameter[1]))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_4.setText(str("{:.6f}".format(parameter[1])))
             j=0
             Y=[]
             while j<size:
@@ -201,8 +201,8 @@ class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
                 y1.append(float(1/y[i]))
                 i+=1
             parameter=self.widget_2.mpl.liner_fitting(x1, y1)
-            self.lineEdit.setText(str(parameter[0]))
-            self.lineEdit_4.setText(str(parameter[1]))
+            self.lineEdit.setText(str("{:.6f}".format(parameter[0])))
+            self.lineEdit_4.setText(str("{:.6f}".format(parameter[1])))
             j=0
             Y=[]
             while j<size:
