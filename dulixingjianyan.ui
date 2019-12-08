@@ -16,11 +16,17 @@
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>10</x>
      <y>40</y>
-     <width>111</width>
+     <width>151</width>
      <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>输入列联表矩阵</string>
@@ -39,14 +45,20 @@
   <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>30</x>
      <y>200</y>
-     <width>81</width>
+     <width>111</width>
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
-    <string>输入置信度</string>
+    <string>显著性水平</string>
    </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
@@ -62,11 +74,17 @@
   <widget class="QLabel" name="label_3">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>360</y>
-     <width>111</width>
-     <height>16</height>
+     <x>30</x>
+     <y>350</y>
+     <width>141</width>
+     <height>31</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>卡方值(统计量)</string>
@@ -100,6 +118,12 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>临界值</string>
    </property>
@@ -126,6 +150,12 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
    <property name="text">
     <string>自由度</string>
    </property>
@@ -146,11 +176,17 @@
   <widget class="QLabel" name="label_7">
    <property name="geometry">
     <rect>
-     <x>390</x>
+     <x>370</x>
      <y>400</y>
-     <width>72</width>
-     <height>16</height>
+     <width>81</width>
+     <height>21</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>检验结果</string>
@@ -174,9 +210,15 @@
     <rect>
      <x>40</x>
      <y>270</y>
-     <width>101</width>
+     <width>121</width>
      <height>41</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
    </property>
    <property name="text">
     <string>检验独立性</string>
