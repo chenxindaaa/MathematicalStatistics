@@ -3,13 +3,13 @@
 """
 Module implementing Form.
 """
-from scipy.stats import chi2
+from scipy.stats import f
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QWidget,QApplication
-from Ui_Sd_chi import Ui_Sd_chi_Form
+from PyQt5.QtWidgets import QWidget, QApplication
+from Ui_Sd_f import Ui_Sd_f_Form
 from PyQt5.QtGui import QIcon, QPixmap, QPainter 
 
-class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
+class Sd_f_Form(QWidget, Ui_Sd_f_Form):
     """
     Class documentation goes here.
     """
@@ -20,10 +20,12 @@ class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
         @param parent reference to the parent widget
         @type QWidget
         """
-        super(Sd_chi_Form, self).__init__(parent)
+        super(Sd_f_Form, self).__init__(parent)
         self.setupUi(self)
         self.widget.setVisible(False)
-        self.setWindowIcon(QIcon('./image/icon.png')) 
+        self.setWindowIcon(QIcon('./image/icon.png'))
+        self.a = 0.8
+        self.b = 0.2
     
     def paintEvent(self,event):
         painter = QPainter(self)
@@ -32,43 +34,48 @@ class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
         painter.drawPixmap(self.rect(),pixmap)
     
     @pyqtSlot()
-    def on_pushButton_chi_plot_clicked(self):
+    def on_pushButton_clicked(self):
         """
         Slot documentation goes here.
         """
-        chi_n=self.spinBox_chi_n.value()
+        f_m=self.doubleSpinBox_f_m.value()
+        f_n=self.doubleSpinBox_f_n.value()
         self.widget.setVisible(True)   
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()     
-        self.widget.mpl.start_chi_plot(chi_n)
-
-    @pyqtSlot()
-    def on_pushButton_quantile_clicked(self):
-        """
-        Slot documentation goes here.
-        """ 
-        chi_n=self.spinBox_chi_n.value()
-        arfa=self.doubleSpinBox_arfa.value()
-        quantile=chi2.isf(arfa, chi_n)
-        self.lineEdit_quantile.setText('%.3f' % quantile)
+        self.widget.mpl. start_f_plot(f_m, f_n)
         
     @pyqtSlot()
-    def on_pushButton_quantile_plot_clicked(self):
+    def on_pushButton_f_quantile_clicked(self):
         """
         Slot documentation goes here.
         """ 
-        chi_n=self.spinBox_chi_n.value()
-        arfa=self.doubleSpinBox_arfa.value()
-        quantile=chi2.isf(arfa, chi_n)
+        f_n=self.doubleSpinBox_f_n.value()
+        f_m=self.doubleSpinBox_f_m.value()
+        arfa=self.doubleSpinBox_f_arfa.value()
+        quantile=f.isf(arfa, f_m, f_n)
+        self.lineEdit_f_quantile.setText('%.3f' % quantile)
+        
+    @pyqtSlot()
+    def on_pushButton_f_quantile_plot_clicked(self):
+        """
+        Slot documentation goes here.
+        """ 
+        f_n=self.doubleSpinBox_f_n.value()
+        f_m=self.doubleSpinBox_f_m.value()
+        arfa=self.doubleSpinBox_f_arfa.value()
+        quantile=f.isf(arfa, f_m, f_n)
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
-            self.widget.mpl.start_chi_plot(chi_n)
-        self.widget.mpl.fill_chi_plot(chi_n, quantile)
+            self.widget.mpl. start_f_plot(f_m, f_n)
+        self.widget.mpl.fill_f_plot(f_m, f_n, quantile, self.a,  self.b)
+        self.a -= 0.05
+        self.b += 0.05
         
 if __name__ == "__main__":
     import sys
     app = QApplication(sys.argv)
-    ui = Sd_chi_Form()
+    ui = Sd_f_Form()
     ui.show()
     sys.exit(app.exec_())
 

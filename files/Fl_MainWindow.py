@@ -34,19 +34,9 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         super(Fl_MainWindow, self).__init__(parent)
         self.setupUi(self)
-        self.dulixingjianyan = dulixingjianyan_Form()
-        self.Sd_chi=Sd_chi_Form()
-        self.Sd_t=Sd_t_Form()
-        self.Sd_f=Sd_f_Form()
-        self.Linear_regression=Form()
-        self.Sd_SingleNormal=Sd_SingleNormal_Form()
-        self.Nonlinear_regression=Nonlinear_regression_Form()
-        self.Sd_DoubleNormal=Sd_DoubleNormal_Form()
-        self.Simple_m_confidence_interval=Simple_m_confidence_interval_Form()
-        self.double_confidence_interval = double_confidence_interval_Form()
-        self.FenbuhanshuNihe = FenbuhanshuNihe_Form()
-        self.Supposetwo=Supposetwo()
-        self.Suppose = Suppose()
+
+        
+        
         self.setWindowIcon(QIcon('./image/icon.png')) 
     
     def paintEvent(self,event):
@@ -60,6 +50,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Sd_chi=Sd_chi_Form()
         self.Sd_chi.show()
         
     @pyqtSlot()
@@ -67,6 +58,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Linear_regression = Form()
         self.Linear_regression.show()
       
     @pyqtSlot()
@@ -74,6 +66,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Sd_t=Sd_t_Form()
         self.Sd_t.show()
         
     @pyqtSlot()
@@ -81,6 +74,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Sd_f=Sd_f_Form()
         self.Sd_f.show()
         
     @pyqtSlot()
@@ -88,6 +82,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Sd_SingleNormal=Sd_SingleNormal_Form()
         self.Sd_SingleNormal.show()
         
     @pyqtSlot()    
@@ -95,6 +90,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Nonlinear_regression=Nonlinear_regression_Form()
         self.Nonlinear_regression.show()
         
     @pyqtSlot()
@@ -102,6 +98,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Sd_DoubleNormal=Sd_DoubleNormal_Form()
         self.Sd_DoubleNormal.show()
         
     @pyqtSlot()
@@ -109,6 +106,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Simple_m_confidence_interval=Simple_m_confidence_interval_Form()
         self.Simple_m_confidence_interval.show()
         
     @pyqtSlot()
@@ -116,6 +114,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.double_confidence_interval = double_confidence_interval_Form()
         self.double_confidence_interval.show()
     
     @pyqtSlot()
@@ -123,6 +122,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.dulixingjianyan = dulixingjianyan_Form()
         self.dulixingjianyan.show()
 
     @pyqtSlot()
@@ -130,6 +130,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.FenbuhanshuNihe = FenbuhanshuNihe_Form()
         self.FenbuhanshuNihe.show()
         
     @pyqtSlot()
@@ -137,6 +138,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Suppose = Suppose()
         self.Suppose.show()
     
     @pyqtSlot()
@@ -144,6 +146,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
+        self.Supposetwo=Supposetwo()
         self.Supposetwo.show()
         
 if __name__ == "__main__":
