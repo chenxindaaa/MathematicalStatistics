@@ -1,7 +1,142 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Tasks SYSTEM "Tasks-6.0.dtd">
 <!-- eric6 tasks file for project mathematics -->
-<!-- Saved: 2019-12-09, 08:07:06 -->
+<!-- Saved: 2019-12-11, 17:19:12 -->
 <Tasks version="6.0">
   <ProjectScanFilter></ProjectScanFilter>
+  <Task priority="1" completed="False" type="1" uid="{abe0c20d-4af2-4ab9-b605-913b5450174f}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:18</Created>
+    <Resource>
+      <Filename>files/Fl_Simple_m_confidence_interval_.py</Filename>
+      <Linenumber>70</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{9863ae21-b408-45c6-977f-f0fdcde558c4}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:18</Created>
+    <Resource>
+      <Filename>files/Fl_Simple_m_confidence_interval_.py</Filename>
+      <Linenumber>104</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{ad429786-221c-4aa3-abb2-8fb1a26eeaee}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:18</Created>
+    <Resource>
+      <Filename>files/Fl_Simple_m_confidence_interval_.py</Filename>
+      <Linenumber>137</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{779b1de5-8d3f-4e6e-aebf-1f35b9b15522}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:18</Created>
+    <Resource>
+      <Filename>files/Fl_Simple_m_confidence_interval_.py</Filename>
+      <Linenumber>144</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{8e4bfe82-1fe9-4f88-b401-b9a4c2b11b61}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:35</Created>
+    <Resource>
+      <Filename>files/Fl_double_confidence_interval.py</Filename>
+      <Linenumber>79</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{ce79079e-ee4a-477e-b929-6e0a9c1722cb}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:35</Created>
+    <Resource>
+      <Filename>files/Fl_double_confidence_interval.py</Filename>
+      <Linenumber>123</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{da63edb9-fe07-4b12-993c-324ae55ac18f}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:35</Created>
+    <Resource>
+      <Filename>files/Fl_double_confidence_interval.py</Filename>
+      <Linenumber>167</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{9e0c2d5b-5dba-438e-931c-182afe4a8d3f}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:35</Created>
+    <Resource>
+      <Filename>files/Fl_double_confidence_interval.py</Filename>
+      <Linenumber>192</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{b267c112-a02e-4182-a145-b70f4bf011ca}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:44</Created>
+    <Resource>
+      <Filename>files/Fl_canshujiashejianyan.py</Filename>
+      <Linenumber>90</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{67dad3e2-0a68-4310-b2f0-a507a2df6c43}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:44</Created>
+    <Resource>
+      <Filename>files/Fl_canshujiashejianyan.py</Filename>
+      <Linenumber>119</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{8da12dc4-cf7d-4aa2-ac91-f0d1e2cb3f83}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:44</Created>
+    <Resource>
+      <Filename>files/Fl_canshujiashejianyan.py</Filename>
+      <Linenumber>147</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{f459aed7-7b36-4de1-ad0b-2c758a3324be}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:53</Created>
+    <Resource>
+      <Filename>files/FI_canshujiashejianyan_two.py</Filename>
+      <Linenumber>68</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{5c3b9b26-0a19-449f-aee8-6b684e23286f}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:53</Created>
+    <Resource>
+      <Filename>files/FI_canshujiashejianyan_two.py</Filename>
+      <Linenumber>99</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{915330b4-9091-4bc4-bd48-c6706e539193}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:53</Created>
+    <Resource>
+      <Filename>files/FI_canshujiashejianyan_two.py</Filename>
+      <Linenumber>129</Linenumber>
+    </Resource>
+  </Task>
+  <Task priority="1" completed="False" type="1" uid="{1f341c68-30f1-41f1-96bc-bffac1ab9212}">
+    <Summary>TODO: not implemented yet</Summary>
+    <Description></Description>
+    <Created>2019-12-11, 17:09:53</Created>
+    <Resource>
+      <Filename>files/FI_canshujiashejianyan_two.py</Filename>
+      <Linenumber>163</Linenumber>
+    </Resource>
+  </Task>
 </Tasks>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project mathematics -->
-<!-- Saved: 2019-12-07, 11:28:33 -->
+<!-- Saved: 2019-12-11, 17:19:11 -->
 <!-- Copyright (C) 2019 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -13,53 +13,38 @@
   <Email></Email>
   <Eol index="0"/>
   <Sources>
-    <Source>FI_canshujiashejianyan_two.py</Source>
-    <Source>Fl_FenbuhanshuNihe.py</Source>
-    <Source>Fl_Linear_regression.py</Source>
-    <Source>Fl_MainWindow.py</Source>
-    <Source>Fl_Nonlinear_regression.py</Source>
-    <Source>Fl_Sd_DoubleNormal.py</Source>
-    <Source>Fl_Sd_SingleNormal.py</Source>
-    <Source>Fl_Sd_chi.py</Source>
-    <Source>Fl_Sd_f.py</Source>
-    <Source>Fl_Sd_t.py</Source>
-    <Source>Fl_Simple_m_confidence_interval_.py</Source>
-    <Source>Fl_canshujiashejianyan.py</Source>
-    <Source>Fl_double_confidence_interval.py</Source>
-    <Source>Fl_dulixingjianyan.py</Source>
-    <Source>Plot.py</Source>
-    <Source>Ui_FenbuhanshuNihe.py</Source>
-    <Source>Ui_Linear_regression.py</Source>
-    <Source>Ui_MainWindow.py</Source>
-    <Source>Ui_Nonlinear_regression.py</Source>
-    <Source>Ui_Sd_DoubleNormal.py</Source>
-    <Source>Ui_Sd_SingleNormal.py</Source>
-    <Source>Ui_Sd_chi.py</Source>
-    <Source>Ui_Sd_f.py</Source>
-    <Source>Ui_Sd_t.py</Source>
-    <Source>Ui_Simple_m_confidence_interval_.py</Source>
-    <Source>Ui_canshujiashejianyan.py</Source>
-    <Source>Ui_canshujiashejianyan_two.py</Source>
-    <Source>Ui_double_confidence_interval.py</Source>
-    <Source>Ui_dulixingjianyan.py</Source>
     <Source>__init__.py</Source>
+    <Source>files/FI_canshujiashejianyan_two.py</Source>
+    <Source>files/Fl_FenbuhanshuNihe.py</Source>
+    <Source>files/Fl_Linear_regression.py</Source>
+    <Source>files/Fl_MainWindow.py</Source>
+    <Source>files/Fl_Nonlinear_regression.py</Source>
+    <Source>files/Fl_Sd_DoubleNormal.py</Source>
+    <Source>files/Fl_Sd_SingleNormal.py</Source>
+    <Source>files/Fl_Sd_chi.py</Source>
+    <Source>files/Fl_Sd_f.py</Source>
+    <Source>files/Fl_Sd_t.py</Source>
+    <Source>files/Fl_Simple_m_confidence_interval_.py</Source>
+    <Source>files/Fl_canshujiashejianyan.py</Source>
+    <Source>files/Fl_double_confidence_interval.py</Source>
+    <Source>files/Fl_dulixingjianyan.py</Source>
+    <Source>files/Plot.py</Source>
+    <Source>files/Ui_FenbuhanshuNihe.py</Source>
+    <Source>files/Ui_Linear_regression.py</Source>
+    <Source>files/Ui_MainWindow.py</Source>
+    <Source>files/Ui_Nonlinear_regression.py</Source>
+    <Source>files/Ui_Sd_DoubleNormal.py</Source>
+    <Source>files/Ui_Sd_SingleNormal.py</Source>
+    <Source>files/Ui_Sd_chi.py</Source>
+    <Source>files/Ui_Sd_f.py</Source>
+    <Source>files/Ui_Sd_t.py</Source>
+    <Source>files/Ui_Simple_m_confidence_interval_.py</Source>
+    <Source>files/Ui_canshujiashejianyan.py</Source>
+    <Source>files/Ui_canshujiashejianyan_two.py</Source>
+    <Source>files/Ui_double_confidence_interval.py</Source>
+    <Source>files/Ui_dulixingjianyan.py</Source>
   </Sources>
-  <Forms>
-    <Form>FenbuhanshuNihe.ui</Form>
-    <Form>Linear_regression.ui</Form>
-    <Form>MainWindow.ui</Form>
-    <Form>Nonlinear_regression.ui</Form>
-    <Form>Sd_DoubleNormal.ui</Form>
-    <Form>Sd_SingleNormal.ui</Form>
-    <Form>Sd_chi.ui</Form>
-    <Form>Sd_f.ui</Form>
-    <Form>Sd_t.ui</Form>
-    <Form>Simple_m_confidence_interval_.ui</Form>
-    <Form>canshujiashejianyan.ui</Form>
-    <Form>canshujiashejianyan_two.ui</Form>
-    <Form>double_confidence_interval.ui</Form>
-    <Form>dulixingjianyan.ui</Form>
-  </Forms>
+  <Forms/>
   <Translations/>
   <Resources/>
   <Interfaces/>

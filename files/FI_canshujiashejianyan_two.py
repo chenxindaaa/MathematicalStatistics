@@ -23,6 +23,7 @@ class Supposetwo(QMainWindow, Ui_Supposetwo):
         """
         super(Supposetwo, self).__init__(parent)
         self.setupUi(self)
+        self.widget.setVisible(False)
         self.setWindowIcon(QIcon('./image/icon.png')) 
     
     def paintEvent(self,event):
