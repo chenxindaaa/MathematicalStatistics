@@ -59,11 +59,7 @@ class Form(QWidget, Ui_Linear_regression_Form):
         except (IndexError,  ValueError):
             QMessageBox.information(self, "标题", "请输入数字并且保证x与y数量一致！(用一个空格间隔)", QMessageBox.Cancel)
             
-    @pyqtSlot()
-    def on_pushButton_3_clicked(self):
-        """
-        Slot documentation goes here.
-        """
+
         
 if __name__ == "__main__":
     import sys

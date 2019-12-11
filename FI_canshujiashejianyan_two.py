@@ -55,7 +55,7 @@ class Supposetwo(QMainWindow, Ui_Supposetwo):
                 self.lineEdit_11.setText(str(''))
                 self.widget.setVisible(True)
                 self.widget.mpl.start_t_plot1(N1-1)  
-                self.widget.mpl.fill_t_plot1(a,N1-1)
+                self.widget.mpl.fill_t_plot1(a,N1-1, u)
                 if abs(u)>=T:
                     self.lineEdit_6.setText(str('否定'))
                 else:
@@ -88,7 +88,7 @@ class Supposetwo(QMainWindow, Ui_Supposetwo):
             self.lineEdit_11.setText(str(F2))
             self.widget.setVisible(True)
             self.widget.mpl.start_f_plot(N1-1, N2-1)  
-            self.widget.mpl.fill_f_plot1(a,N1-1, N2-1)
+            self.widget.mpl.fill_f_plot1(a,N1-1, N2-1, u)
             if abs(u) > F1 or  abs(u) < F2:
                 self.lineEdit_6.setText(str('否定'))
             else:
@@ -118,7 +118,7 @@ class Supposetwo(QMainWindow, Ui_Supposetwo):
             self.lineEdit_11.setText(str(''))
             self.widget.setVisible(True)
             self.widget.mpl.start_f_plot(N1-1, N2-1)
-            self.widget.mpl.fill_f_plot2(a,N1-1, N2-1)
+            self.widget.mpl.fill_f_plot2(a,N1-1, N2-1,u)
             if abs(u) >= F1:
                 self.lineEdit_6.setText(str('样本A的方差不大于样本B'))
             else:
@@ -152,7 +152,7 @@ class Supposetwo(QMainWindow, Ui_Supposetwo):
             self.lineEdit_11.setText(str(''))
             self.widget.setVisible(True)
             self.widget.mpl.start_t_plot1(N-2)  
-            self.widget.mpl.fill_t_plot1(a,N-2)
+            self.widget.mpl.fill_t_plot1(a,N-2, u)
             if abs(u)>=T:
                 self.lineEdit_6.setText(str('否定'))
             else:

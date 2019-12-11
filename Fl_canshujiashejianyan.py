@@ -51,7 +51,7 @@ class Suppose(QMainWindow, Ui_Suppose):
             self.lineEdit_10.setText(str(''))
             self.widget.setVisible(True)
             self.widget.mpl.start_normal_plot(0, 1)  
-            self.widget.mpl.fill_normal_plot(a, 0, 1)
+            self.widget.mpl.fill_normal_plot(a, 0, 1, U)
             if abs(U)>u1:
                 self.lineEdit_6.setText(str('否定'))
             else:
@@ -79,7 +79,7 @@ class Suppose(QMainWindow, Ui_Suppose):
             self.lineEdit_10.setText(str(''))
             self.widget.setVisible(True)
             self.widget.mpl.start_t_plot1(N-1)  
-            self.widget.mpl.fill_t_plot1(a,N-1)
+            self.widget.mpl.fill_t_plot1(a,N-1, T)
             if abs(T)>u2:
                 self.lineEdit_6.setText(str('否定'))
             else:
@@ -108,7 +108,7 @@ class Suppose(QMainWindow, Ui_Suppose):
             self.lineEdit_10.setText(str(u2))
             self.widget.setVisible(True)
             self.widget.mpl.start_chi2_plot(N-1)  
-            self.widget.mpl.fill_chi2_plot(a,N-1)
+            self.widget.mpl.fill_chi2_plot(a,N-1, X)
             if abs(X)>u2 or abs(X)<u1:
                 self.lineEdit_6.setText(str('否定'))
             else:
@@ -136,7 +136,7 @@ class Suppose(QMainWindow, Ui_Suppose):
             self.lineEdit_10.setText(str(''))
             self.widget.setVisible(True)
             self.widget.mpl.start_chi2_plot(N-1)  
-            self.widget.mpl.fill_chi2_plot1(1-a,N-1)
+            self.widget.mpl.fill_chi2_plot1(1-a,N-1,  X)
             if abs(X)>=u2:
                 self.lineEdit_6.setText(str('大于假设方差'))
             else:

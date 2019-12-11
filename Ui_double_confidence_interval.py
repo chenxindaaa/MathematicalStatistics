@@ -1,27 +1,32 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\double_confidence_interval.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\MathematicalStatistics\double_confidence_interval.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_double_confidence_interval_Form(object):
     def setupUi(self, double_confidence_interval_Form):
         double_confidence_interval_Form.setObjectName("double_confidence_interval_Form")
-        double_confidence_interval_Form.resize(1359, 781)
+        double_confidence_interval_Form.resize(903, 511)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(double_confidence_interval_Form.sizePolicy().hasHeightForWidth())
         double_confidence_interval_Form.setSizePolicy(sizePolicy)
         self.pushButton = QtWidgets.QPushButton(double_confidence_interval_Form)
-        self.pushButton.setGeometry(QtCore.QRect(50, 50, 331, 31))
+        self.pushButton.setGeometry(QtCore.QRect(20, 20, 270, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.layoutWidget = QtWidgets.QWidget(double_confidence_interval_Form)
-        self.layoutWidget.setGeometry(QtCore.QRect(50, 110, 361, 181))
+        self.layoutWidget.setGeometry(QtCore.QRect(20, 120, 171, 161))
         self.layoutWidget.setObjectName("layoutWidget")
         self.gridLayout_2 = QtWidgets.QGridLayout(self.layoutWidget)
         self.gridLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -91,7 +96,7 @@ class Ui_double_confidence_interval_Form(object):
         self.doubleSpinBox_3.setObjectName("doubleSpinBox_3")
         self.gridLayout_2.addWidget(self.doubleSpinBox_3, 3, 2, 1, 1)
         self.layoutWidget1 = QtWidgets.QWidget(double_confidence_interval_Form)
-        self.layoutWidget1.setGeometry(QtCore.QRect(50, 320, 361, 181))
+        self.layoutWidget1.setGeometry(QtCore.QRect(200, 120, 171, 161))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.gridLayout_5 = QtWidgets.QGridLayout(self.layoutWidget1)
         self.gridLayout_5.setContentsMargins(0, 0, 0, 0)
@@ -161,16 +166,22 @@ class Ui_double_confidence_interval_Form(object):
         self.doubleSpinBox_5.setObjectName("doubleSpinBox_5")
         self.gridLayout_5.addWidget(self.doubleSpinBox_5, 3, 1, 1, 1)
         self.pushButton_2 = QtWidgets.QPushButton(double_confidence_interval_Form)
-        self.pushButton_2.setGeometry(QtCore.QRect(500, 50, 331, 31))
+        self.pushButton_2.setGeometry(QtCore.QRect(315, 20, 270, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.widget = Plot(double_confidence_interval_Form)
-        self.widget.setGeometry(QtCore.QRect(490, 120, 791, 571))
+        self.widget.setGeometry(QtCore.QRect(390, 130, 481, 351))
         self.widget.setObjectName("widget")
         self.pushButton_3 = QtWidgets.QPushButton(double_confidence_interval_Form)
-        self.pushButton_3.setGeometry(QtCore.QRect(950, 50, 331, 31))
+        self.pushButton_3.setGeometry(QtCore.QRect(610, 20, 270, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_3.setFont(font)
         self.pushButton_3.setObjectName("pushButton_3")
         self.layoutWidget2 = QtWidgets.QWidget(double_confidence_interval_Form)
-        self.layoutWidget2.setGeometry(QtCore.QRect(50, 530, 361, 41))
+        self.layoutWidget2.setGeometry(QtCore.QRect(20, 300, 341, 31))
         self.layoutWidget2.setObjectName("layoutWidget2")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget2)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -189,7 +200,7 @@ class Ui_double_confidence_interval_Form(object):
         self.doubleSpinBox.setObjectName("doubleSpinBox")
         self.horizontalLayout.addWidget(self.doubleSpinBox)
         self.layoutWidget3 = QtWidgets.QWidget(double_confidence_interval_Form)
-        self.layoutWidget3.setGeometry(QtCore.QRect(50, 590, 361, 141))
+        self.layoutWidget3.setGeometry(QtCore.QRect(20, 350, 341, 131))
         self.layoutWidget3.setObjectName("layoutWidget3")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget3)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -230,6 +241,33 @@ class Ui_double_confidence_interval_Form(object):
         self.lineEdit_25.setMaxLength(20)
         self.lineEdit_25.setObjectName("lineEdit_25")
         self.verticalLayout.addWidget(self.lineEdit_25)
+        self.pushButton_7 = QtWidgets.QPushButton(double_confidence_interval_Form)
+        self.pushButton_7.setGeometry(QtCore.QRect(310, 70, 81, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_7.setFont(font)
+        self.pushButton_7.setObjectName("pushButton_7")
+        self.radioButton = QtWidgets.QRadioButton(double_confidence_interval_Form)
+        self.radioButton.setGeometry(QtCore.QRect(430, 75, 141, 21))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.radioButton.setFont(font)
+        self.radioButton.setObjectName("radioButton")
+        self.lineEdit = QtWidgets.QLineEdit(double_confidence_interval_Form)
+        self.lineEdit.setGeometry(QtCore.QRect(20, 70, 271, 31))
+        self.lineEdit.setObjectName("lineEdit")
+        self.radioButton_3 = QtWidgets.QRadioButton(double_confidence_interval_Form)
+        self.radioButton_3.setGeometry(QtCore.QRect(770, 75, 111, 21))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.radioButton_3.setFont(font)
+        self.radioButton_3.setObjectName("radioButton_3")
+        self.radioButton_5 = QtWidgets.QRadioButton(double_confidence_interval_Form)
+        self.radioButton_5.setGeometry(QtCore.QRect(600, 75, 151, 21))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.radioButton_5.setFont(font)
+        self.radioButton_5.setObjectName("radioButton_5")
 
         self.retranslateUi(double_confidence_interval_Form)
         QtCore.QMetaObject.connectSlotsByName(double_confidence_interval_Form)
@@ -252,11 +290,15 @@ class Ui_double_confidence_interval_Form(object):
         self.label_8.setText(_translate("double_confidence_interval_Form", "样本Y"))
         self.pushButton_2.setText(_translate("double_confidence_interval_Form", "均值差的区间估计（方差未知）"))
         self.pushButton_3.setText(_translate("double_confidence_interval_Form", "方差比的区间估计"))
-        self.label.setText(_translate("double_confidence_interval_Form", "  请输入α "))
+        self.label.setText(_translate("double_confidence_interval_Form", "  请输入显著性水平α "))
         self.label_7.setText(_translate("double_confidence_interval_Form", "均值差的置信区间（X-Y）"))
         self.label_10.setText(_translate("double_confidence_interval_Form", "方差比的置信区间（X/Y）"))
-
+        self.pushButton_7.setText(_translate("double_confidence_interval_Form", "导入样本"))
+        self.radioButton.setText(_translate("double_confidence_interval_Form", "样本X频率直方图"))
+        self.radioButton_3.setText(_translate("double_confidence_interval_Form", "样本分布图"))
+        self.radioButton_5.setText(_translate("double_confidence_interval_Form", "样本Y频率直方图"))
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -266,4 +308,3 @@ if __name__ == "__main__":
     ui.setupUi(double_confidence_interval_Form)
     double_confidence_interval_Form.show()
     sys.exit(app.exec_())
-

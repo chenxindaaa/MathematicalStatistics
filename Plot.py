@@ -40,16 +40,17 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.chi2.pdf(x,chi_n), alpha=0.5)
         self.draw()
         
-    def fill_chi2_plot1(self,a,N):
+    def fill_chi2_plot1(self,a,N, X):
         c2=stats.chi2.isf(0.0000001, N)
         c1=stats.chi2.isf(0.9999999, N)
         x=np.linspace(c1,c2,100)
         p=chi2.ppf(a, N)
         self.axes.fill_between(x, stats.chi2.pdf(x,N), x>p, x<c1 ,color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.fill_between(x, stats.chi2.pdf(x,N), x<c1, x>p , color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.annotate('观察值', xy=(X, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
         self.draw()
         
-    def fill_chi2_plot(self, a, N):
+    def fill_chi2_plot(self, a, N, X):
         p=chi2.ppf(a/2, N)
         q=chi2.ppf(1-a/2, N)
         c2=stats.chi2.isf(0.0000001, N)
@@ -57,6 +58,7 @@ class MyMplCanvas(FigureCanvas):
         x=np.linspace(c1,c2,100)
         self.axes.fill_between(x, stats.chi2.pdf(x, N),x<p, x>q, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.fill_between(x, stats.chi2.pdf(x, N),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.annotate('观察值', xy=(X, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
         self.draw()
     
     def fill_t_plot(self,t_n, quantile):
@@ -64,12 +66,13 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.t.pdf(x,t_n), alpha=0.5)
         self.draw()
         
-    def fill_t_plot1(self, a, N):
+    def fill_t_plot1(self, a, N, T):
         p=t.ppf(a/2, N)
         q=t.ppf(1-a/2, N)
         x=np.linspace(-10,10,100)
         self.axes.fill_between(x, stats.t.pdf(x, N),x<p, x>q, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.fill_between(x, stats.t.pdf(x, N),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.annotate('观察值', xy=(T, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
         self.draw()
         
     def fill_f_plot(self, f_m, f_n,  quantile):
@@ -77,20 +80,30 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.f.pdf(x,f_m, f_n), alpha=0.5)
         self.draw()
         
-    def fill_f_plot1(self, a, N1, N2):
+    def fill_f_plot1(self, a, N1, N2, u):
         p=f.ppf(a/2, N1, N2)
         q=f.ppf(1-a/2, N1, N2)
         x=np.linspace(0,7,100)
         self.axes.fill_between(x, stats.f.pdf(x, N1, N2),x<p, x>q, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.fill_between(x, stats.f.pdf(x, N1, N2),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.annotate('观察值', xy=(u, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
+        self.draw()
+        
+    def fill_f_plot2(self, a, N1, N2, u):
+        q=f.ppf(1-a/2, N1, N2)
+        x=np.linspace(0,7,100)
+        self.axes.fill_between(x, stats.f.pdf(x, N1, N2),x>q,x<0, color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.fill_between(x, stats.f.pdf(x, N1, N2),x<0, x>q, color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.annotate('观察值', xy=(u, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
         self.draw()
     
-    def fill_normal_plot(self, a, m, n):
+    def fill_normal_plot(self, a, m, n, U):
         q=norm.ppf(1-a/2)
         p=norm.ppf(a/2)
         x=np.linspace(-10,10,100)
         self.axes.fill_between(x, stats.norm.pdf(x, m, n), x<p, x>q,  color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.fill_between(x, stats.norm.pdf(x, m, n), x>q, x<p,  color='dodgerblue', edgecolor='black', alpha=0.5)
+        self.axes.annotate('观察值', xy=(U, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
         self.draw()
     
     def start_normal_plot(self, m, n): 
@@ -129,7 +142,8 @@ class MyMplCanvas(FigureCanvas):
         self.axes.legend()
         self.draw()
         
-    def start_f_plot(self,N1, N2): 
+    def start_f_plot(self,N1, N2):
+        self.axes.cla() 
         x=np.linspace(0,7,100)
         self.axes.plot(x,stats.f.pdf(x, N1, N2), label='自由度='+str(N1)+str(", ")+str(N2))
         self.axes.set_xlabel('x')
@@ -309,14 +323,89 @@ class MyMplCanvas(FigureCanvas):
         self.axes.legend()
         self.draw()
         
-    def fill_f_plot2(self, a, N1, N2):
-        q=f.ppf(1-a/2, N1, N2)
-        x=np.linspace(0,7,100)
-        self.axes.fill_between(x, stats.f.pdf(x, N1, N2),x>q,x<0, color='dodgerblue', edgecolor='black', alpha=0.5)
-        self.axes.fill_between(x, stats.f.pdf(x, N1, N2),x<0, x>q, color='dodgerblue', edgecolor='black', alpha=0.5)
+        
+    def draw_hist(self, N,y):
+        self.axes.cla()
+        x = np.arange(1, N+1, 1)
+        ys = np.mean(y)
+        self.axes.bar(x,y)
+        if N<=20:
+            for a,b in zip(x,y):
+                if b>0:
+                    self.axes.text(a,b+0.15,'%.2f'%b,ha = 'center',va = 'bottom')
+                else:
+                    self.axes.text(a,b-0.4,'%.2f'%b,ha = 'center',va = 'bottom')
+        self.axes.axhline(y=ys,c="r")
+        self.axes.text(-1, ys+0.2, '均值=%.4f' % ys, ha='center', va= 'bottom',fontsize=12, color = "b")
+        self.axes.set_xlabel('样本编号')
+        self.axes.set_ylabel('样本值')
+        self.fig.suptitle("样本分布图")
+        self.axes.legend()
         self.draw()
-
-
+        #ymin = math.floor(y[0])
+        #ymax = math.ceil(y[-1])
+        #self.fig.suptitle('样本分布图')
+        #self.axes1.spines['bottom'].set_position(('data',ymin))
+        #self.axes1.spines['left'].set_position(('data', 0))
+        #self.axes2.spines['bottom'].set_position(('data',ymin))
+        #self.axes2.spines['left'].set_position(('data', 0))
+        #self.axes2.bar(num.keys(), num.values())
+        #self.axes1.set_yticks(np.linspace(ymin,ymax)
+        #self.axes1.set_xticks(np.linspace(1,N,num=10))
+        #self.axes1.autoscale()
+        #if N <= 20:
+            #self.axes1.set_xticks(np.linspace(1,N,num=N))
+            #self.axes2.set_xticks(np.linspace(1,N,num=N))
+        
+    def draw_hist2(self,N, y, mean, std, m, n):
+        self.axes.cla()
+        ys = math.ceil(max(abs(min(y)), max(y)))
+        x=np.linspace(mean-ys, mean+ys, 100)
+        N, bins, patches =self.axes.hist(y, 50, density=1, facecolor="yellow", edgecolor="black", alpha=0.7)
+        self.axes.plot(x, stats.norm.pdf(x, loc=m, scale=n),"b", label='N(%.2f,%.2f)' %(m, n))
+        self.axes.axvline(x=mean , c='r')
+        self.axes.text(mean, -0.08/len(N), '样本均值=%.4f' %mean, ha='center', va= 'bottom',fontsize=12, color = "b")
+        self.axes.set_xlabel('x')
+        self.axes.set_ylabel('pdf')
+        self.fig.suptitle("样本的分布")
+        self.axes.legend()
+        self.draw()
+        
+    def draw_hist3(self, N1,N2, y1, y2):
+        self.axes.cla()
+        N = max(N1, N2)
+        x1 = np.arange(1, N1+1, 1)
+        x2 = np.arange(1, N2+1, 1)
+        y1.sort()
+        y2.sort()
+        ys1 = np.mean(y1)
+        ys2 = np.mean(y2)
+        bar_width = 0.3*20/N
+        self.axes.bar(x1-bar_width /2,y1, width=bar_width, color = 'r')
+        self.axes.bar(x2+bar_width /2,y2, width=bar_width, color = 'g')
+        if N<=15:
+            for a,b in zip(x1,y1):
+                if b>0:
+                    self.axes.text(a,b+0.15,'%.2f'%b,ha = 'center',va = 'bottom')
+                else:
+                    self.axes.text(a,b-0.4,'%.2f'%b,ha = 'center',va = 'bottom')
+            for a,b in zip(x2,y2):
+                if b>0:
+                    self.axes.text(a,b+0.15,'%.2f'%b,ha = 'center',va = 'bottom')
+                else:
+                    self.axes.text(a,b-0.4,'%.2f'%b,ha = 'center',va = 'bottom')
+        #self.axes.axhline(y=ys1,c="r")
+        #self.axes.axhline(y=ys2,c="g")
+        self.axes.plot(x1, np.array([ys1]*N1), label = '均值=%.4f'%ys1, color = 'r')
+        self.axes.plot(x2, np.array([ys2]*N2), label = '均值=%.4f'%ys2, color = 'g')
+        #self.axes.text(-1, ys1+0.2, '均值=%.4f' % ys1, ha='center', va= 'bottom',fontsize=12, color = "b")
+        #self.axes.text(-1, ys2+0.2, '均值=%.4f' % ys2, ha='center', va= 'bottom',fontsize=12, color = "b")
+        self.axes.set_xlabel('样本编号')
+        self.axes.set_ylabel('样本值')
+        self.fig.suptitle("样本分布图")
+        self.axes.legend()
+        self.draw()
+    
 class Plot(QWidget):
     def __init__(self, parent=None):
         super(Plot, self).__init__(parent)
