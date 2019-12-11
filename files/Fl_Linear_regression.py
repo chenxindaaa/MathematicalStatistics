@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 
 """
 Module implementing Form.
@@ -103,6 +103,7 @@ class Form(QWidget, Ui_Linear_regression_Form):
                 self.lineEdit_10.setText(str(0))
         except(ValueError):
             QMessageBox.information(self, "标题", "请输入正确的显著性水平", QMessageBox.Cancel)
+
         
 if __name__ == "__main__":
     import sys

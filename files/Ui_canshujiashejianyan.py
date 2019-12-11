@@ -1,27 +1,32 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\canshujiashejianyan.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\MathematicalStatistics\canshujiashejianyan.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Suppose(object):
     def setupUi(self, Suppose):
         Suppose.setObjectName("Suppose")
-        Suppose.resize(1337, 883)
+        Suppose.resize(903, 511)
         self.centralwidget = QtWidgets.QWidget(Suppose)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(470, 30, 331, 31))
+        self.pushButton.setGeometry(QtCore.QRect(320, 10, 221, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.widget = Plot(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(460, 130, 811, 661))
+        self.widget.setGeometry(QtCore.QRect(330, 100, 551, 361))
         self.widget.setObjectName("widget")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget.setGeometry(QtCore.QRect(60, 30, 331, 501))
+        self.layoutWidget.setGeometry(QtCore.QRect(30, 20, 221, 281))
         self.layoutWidget.setObjectName("layoutWidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.layoutWidget)
         self.verticalLayout.setContentsMargins(6, 0, 6, 0)
@@ -148,7 +153,7 @@ class Ui_Suppose(object):
         self.doubleSpinBox.setObjectName("doubleSpinBox")
         self.verticalLayout.addWidget(self.doubleSpinBox)
         self.layoutWidget1 = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget1.setGeometry(QtCore.QRect(60, 770, 331, 51))
+        self.layoutWidget1.setGeometry(QtCore.QRect(30, 430, 281, 31))
         self.layoutWidget1.setObjectName("layoutWidget1")
         self.horizontalLayout = QtWidgets.QHBoxLayout(self.layoutWidget1)
         self.horizontalLayout.setContentsMargins(0, 0, 0, 0)
@@ -166,7 +171,7 @@ class Ui_Suppose(object):
         self.lineEdit_6.setObjectName("lineEdit_6")
         self.horizontalLayout.addWidget(self.lineEdit_6)
         self.layoutWidget2 = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget2.setGeometry(QtCore.QRect(60, 630, 331, 41))
+        self.layoutWidget2.setGeometry(QtCore.QRect(30, 350, 281, 31))
         self.layoutWidget2.setObjectName("layoutWidget2")
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout(self.layoutWidget2)
         self.horizontalLayout_2.setContentsMargins(0, 0, 0, 0)
@@ -190,7 +195,7 @@ class Ui_Suppose(object):
         self.lineEdit_8.setObjectName("lineEdit_8")
         self.horizontalLayout_2.addWidget(self.lineEdit_8)
         self.layoutWidget3 = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget3.setGeometry(QtCore.QRect(60, 560, 331, 41))
+        self.layoutWidget3.setGeometry(QtCore.QRect(30, 310, 281, 31))
         self.layoutWidget3.setObjectName("layoutWidget3")
         self.horizontalLayout_3 = QtWidgets.QHBoxLayout(self.layoutWidget3)
         self.horizontalLayout_3.setContentsMargins(0, 0, 0, 0)
@@ -209,10 +214,13 @@ class Ui_Suppose(object):
         self.lineEdit_9.setObjectName("lineEdit_9")
         self.horizontalLayout_3.addWidget(self.lineEdit_9)
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(920, 30, 331, 31))
+        self.pushButton_2.setGeometry(QtCore.QRect(560, 10, 221, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_2.setFont(font)
         self.pushButton_2.setObjectName("pushButton_2")
         self.layoutWidget_2 = QtWidgets.QWidget(self.centralwidget)
-        self.layoutWidget_2.setGeometry(QtCore.QRect(60, 700, 331, 41))
+        self.layoutWidget_2.setGeometry(QtCore.QRect(30, 390, 281, 31))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
         self.horizontalLayout_4 = QtWidgets.QHBoxLayout(self.layoutWidget_2)
         self.horizontalLayout_4.setContentsMargins(0, 0, 0, 0)
@@ -246,14 +254,20 @@ class Ui_Suppose(object):
         self.lineEdit_10.setObjectName("lineEdit_10")
         self.horizontalLayout_4.addWidget(self.lineEdit_10)
         self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(470, 80, 331, 31))
+        self.pushButton_3.setGeometry(QtCore.QRect(320, 60, 221, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_3.setFont(font)
         self.pushButton_3.setObjectName("pushButton_3")
         self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(920, 80, 331, 31))
+        self.pushButton_4.setGeometry(QtCore.QRect(560, 60, 221, 31))
+        font = QtGui.QFont()
+        font.setPointSize(12)
+        self.pushButton_4.setFont(font)
         self.pushButton_4.setObjectName("pushButton_4")
         Suppose.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Suppose)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1337, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 903, 22))
         self.menubar.setObjectName("menubar")
         Suppose.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(Suppose)
@@ -281,8 +295,8 @@ class Ui_Suppose(object):
         self.label_10.setText(_translate("Suppose", "统计量临界值"))
         self.pushButton_3.setText(_translate("Suppose", "方差检验（相等）"))
         self.pushButton_4.setText(_translate("Suppose", "方差检验(比较)"))
-
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -292,4 +306,3 @@ if __name__ == "__main__":
     ui.setupUi(Suppose)
     Suppose.show()
     sys.exit(app.exec_())
-
