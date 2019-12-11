@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>903</width>
-    <height>511</height>
+    <width>1128</width>
+    <height>683</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>20</y>
-      <width>211</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
@@ -35,10 +35,10 @@
    <widget class="Plot" name="widget" native="true">
     <property name="geometry">
      <rect>
-      <x>320</x>
-      <y>100</y>
-      <width>561</width>
-      <height>361</height>
+      <x>350</x>
+      <y>120</y>
+      <width>731</width>
+      <height>461</height>
      </rect>
     </property>
    </widget>
@@ -47,8 +47,8 @@
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>211</width>
-      <height>271</height>
+      <width>271</width>
+      <height>341</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -255,9 +255,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>420</y>
-      <width>271</width>
-      <height>31</height>
+      <y>560</y>
+      <width>281</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -287,9 +287,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>340</y>
-      <width>271</width>
-      <height>31</height>
+      <y>440</y>
+      <width>281</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_2">
@@ -328,9 +328,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>300</y>
-      <width>271</width>
-      <height>31</height>
+      <y>380</y>
+      <width>281</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -363,9 +363,9 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>380</y>
-      <width>271</width>
-      <height>31</height>
+      <y>500</y>
+      <width>281</width>
+      <height>41</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -419,9 +419,9 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>370</x>
       <y>60</y>
-      <width>211</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
@@ -437,9 +437,9 @@
    <widget class="QPushButton" name="pushButton_4">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>800</x>
       <y>60</y>
-      <width>211</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
@@ -455,9 +455,9 @@
    <widget class="QPushButton" name="pushButton_2">
     <property name="geometry">
      <rect>
-      <x>650</x>
+      <x>800</x>
       <y>20</y>
-      <width>211</width>
+      <width>251</width>
       <height>31</height>
      </rect>
     </property>
@@ -476,8 +476,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>903</width>
-     <height>22</height>
+     <width>1128</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

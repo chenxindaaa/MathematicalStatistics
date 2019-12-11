@@ -26,6 +26,7 @@ class double_confidence_interval_Form(QWidget, Ui_double_confidence_interval_For
         super(double_confidence_interval_Form, self).__init__(parent)
         self.setupUi(self)
         self.setWindowIcon(QIcon('./image/icon.png')) 
+        self.widget.setVisible(False)
         self.data = None
     
     def paintEvent(self,event):

@@ -151,7 +151,7 @@ class MyMplCanvas(FigureCanvas):
     def start_f_plot(self,N1, N2):
         self.axes.cla() 
         x=np.linspace(0,7,100)
-        self.axes.plot(x,stats.f.pdf(x, N1, N2), label="$f(n_1, n_2)$")
+        self.axes.plot(x,stats.f.pdf(x, N1, N2), label="F(%d,%d)" %(N1, N2))
         self.axes.set_xlabel('x')
         self.axes.set_ylabel('y')
         self.axes.grid(True)
