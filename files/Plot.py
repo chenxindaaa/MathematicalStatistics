@@ -207,8 +207,8 @@ class MyMplCanvas(FigureCanvas):
         self.draw()   
     def start_Single_Normal_plot1(self, m, n, mu, sigma):
         self.axes.cla()
-        X=sigma * matlib.randn((n, m)) + mu#模拟抽样，每一列是一个样本容量为n的样本，共抽样m次
-        Xmean=np.mean(X,axis=0)#样本均值
+        X=sigma * matlib.randn((n, m)) + mu # 模拟抽样，每一列是一个样本容量为n的样本，共抽样m次
+        Xmean=np.mean(X,axis=0) # 样本均值
         z=(Xmean-mu)/(sigma/math.sqrt(n))
         Z=np.array(z).flatten()
         x=np.linspace(-5, 5, 100)
@@ -339,6 +339,6 @@ class Plot(QWidget):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ui = Plot()
-    ui.mpl.start_Single_Normal_plot3()
+    ui.mpl.start_Single_Normal_plot1(1000,  20,  0,  1)
     ui.show()
     sys.exit(app.exec_())
