@@ -93,15 +93,21 @@ class Form(QWidget, Ui_Linear_regression_Form):
             for i in range(0, n):
                 SSR+=(draw_data[i]-y_)**2
                 SSE+=(y[i]-draw_data[i])**2
-            F=SSR/SSE*(n-2)
-            self.lineEdit_8.setText(str("{:.6f}".format(F)))
-            F_=f.ppf(1-Alpha,dfn=1,dfd=n-2)
-            self.lineEdit_9.setText(str("{:.6f}".format(F_)))
-            if F>F_:
-                self.lineEdit_10.setText(str(1))
+            if SSE==0:
+                self.lineEdit_10.setText(str("通过"))
+                self.lineEdit_8.setText(str("inf"))
+                F_=f.ppf(1-Alpha,dfn=1,dfd=n-2)
+                self.lineEdit_9.setText(str("{:.6f}".format(F_)))
             else:
-                self.lineEdit_10.setText(str(0))
-        except(ValueError):
+                F=SSR/SSE*(n-2)
+                self.lineEdit_8.setText(str("{:.6f}".format(F)))
+                F_=f.ppf(1-Alpha,dfn=1,dfd=n-2)
+                self.lineEdit_9.setText(str("{:.6f}".format(F_)))
+                if F>F_:
+                    self.lineEdit_10.setText(str("通过"))
+                else:
+                    self.lineEdit_10.setText(str("不通过"))
+        except(ValueError, ZeroDivisionError):
             QMessageBox.information(self, "标题", "请输入正确的显著性水平", QMessageBox.Cancel)
         
 if __name__ == "__main__":

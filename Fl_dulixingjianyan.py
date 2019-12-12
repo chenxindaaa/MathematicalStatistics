@@ -51,7 +51,7 @@ class dulixingjianyan_Form(QWidget, Ui_dulixingjianyan_Form):
             self.lineEdit_3.setText(str("{:.2f}".format(parameter[1])))
             self.lineEdit_4.setText(str(parameter[2]))
             self.lineEdit_5.setText(str(parameter[3]))
-        except ValueError:
+        except (ValueError):
             QMessageBox.information(self, "标题", "请输入数字！(用一个空格间隔)", QMessageBox.Cancel)
      
     def chi2_independence(self, alpha, data):

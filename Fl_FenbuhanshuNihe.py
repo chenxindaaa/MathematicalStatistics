@@ -54,10 +54,9 @@ class FenbuhanshuNihe_Form(QWidget, Ui_FenbuhanshuNihe_Form):
             self.lineEdit_2.setText(str("{:.4f}".format(parameter[1])))
         
             if parameter[1]>0.05:  #检验水平规定为0.05
-                c=1
+                self.lineEdit_4.setText(str("服从"))
             else:
-                c=0
-            self.lineEdit_4.setText(str(c))
+                self.lineEdit_4.setText(str("不服从"))
             print(data)
             
         except :
@@ -111,10 +110,10 @@ class FenbuhanshuNihe_Form(QWidget, Ui_FenbuhanshuNihe_Form):
             p=chi2.sf(x, m-2)
             self.lineEdit_3.setText(str("{:.4f}".format(p)))
             if p>0.05:  #检验水平规定为0.05
-                c=1
+                self.lineEdit_5.setText(str("服从"))
             else:
-                c=0
-            self.lineEdit_5.setText(str(c))
+                self.lineEdit_5.setText(str("不服从"))
+           
         except:
             QMessageBox.information(self, "标题", "原文件路径输入错误", QMessageBox.Cancel)
         
