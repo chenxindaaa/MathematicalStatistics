@@ -3,6 +3,7 @@
 """
 Module implementing MainWindow.
 """
+import os
 from PyQt5.QtGui import QIcon, QPixmap, QPainter
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QMainWindow, QApplication
@@ -148,6 +149,14 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         self.Supposetwo=Supposetwo()
         self.Supposetwo.show()
+        
+    @pyqtSlot()
+    def on_menu_5_aboutToShow(self):
+        """
+        Slot documentation goes here.
+        """
+        os.startfile(r'.\README.docx')
+    
         
 if __name__ == "__main__":
     import sys

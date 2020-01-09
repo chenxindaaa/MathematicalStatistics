@@ -4,11 +4,9 @@
 Module implementing Form.
 """
 import math
-from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import QWidget, QApplication,  QMessageBox 
 from Ui_Nonlinear_regression import Ui_Nonlinear_regression_Form
 from PyQt5.QtGui import QIcon, QPixmap, QPainter
-from scipy.stats import f
 
 class Nonlinear_regression_Form(QWidget, Ui_Nonlinear_regression_Form):
     """

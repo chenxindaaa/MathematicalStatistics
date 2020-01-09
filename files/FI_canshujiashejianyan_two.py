@@ -121,9 +121,9 @@ class Supposetwo(QMainWindow, Ui_Supposetwo):
             self.widget.mpl.start_f_plot(N1-1, N2-1)
             self.widget.mpl.fill_f_plot2(a,N1-1, N2-1,u)
             if abs(u) >= F1:
-                self.lineEdit_6.setText(str('样本A的方差不大于样本B'))
-            else:
                 self.lineEdit_6.setText(str('样本A的方差大于样本B'))
+            else:
+                self.lineEdit_6.setText(str('样本A的方差不大于样本B'))
         else:
             reply=QMessageBox.information(self, "提示","样本B的方差为0！")
         # TODO: not implemented yet
