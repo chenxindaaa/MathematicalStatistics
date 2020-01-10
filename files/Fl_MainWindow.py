@@ -35,9 +35,6 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         super(Fl_MainWindow, self).__init__(parent)
         self.setupUi(self)
-
-        
-        
         self.setWindowIcon(QIcon('./image/icon.png')) 
     
     def paintEvent(self,event):
@@ -155,7 +152,7 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         """
         Slot documentation goes here.
         """
-        os.startfile(r'.\README.docx')
+        os.startfile(r'README.pdf')
     
         
 if __name__ == "__main__":

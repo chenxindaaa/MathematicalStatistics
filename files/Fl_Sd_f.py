@@ -24,8 +24,25 @@ class Sd_f_Form(QWidget, Ui_Sd_f_Form):
         self.setupUi(self)
         self.widget.setVisible(False)
         self.setWindowIcon(QIcon('./image/icon.png'))
-        self.a = 0.8
-        self.b = 0.2
+        self.a = 0.75
+        self.b = 0.7
+        self.radioButton_few.toggled.connect(self.clean)
+        self.radioButton_one.toggled.connect(self.showitems)
+
+        
+    def clean(self):
+        self.label_3.hide()
+        self.doubleSpinBox_f_arfa.hide()
+        self.pushButton_f_quantile_plot.hide()
+        self.pushButton_f_quantile.hide()
+        self.lineEdit_f_quantile.hide()
+        
+    def showitems(self):
+        self.label_3.show()
+        self.doubleSpinBox_f_arfa.show()
+        self.pushButton_f_quantile_plot.show()
+        self.pushButton_f_quantile.show()
+        self.lineEdit_f_quantile.show()
     
     def paintEvent(self,event):
         painter = QPainter(self)
@@ -68,9 +85,7 @@ class Sd_f_Form(QWidget, Ui_Sd_f_Form):
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
             self.widget.mpl. start_f_plot(f_m, f_n)
-        self.widget.mpl.fill_f_plot(f_m, f_n, quantile, self.a,  self.b)
-        self.a -= 0.05
-        self.b += 0.05
+        self.widget.mpl.fill_f_plot(f_m, f_n, quantile, self.a,  self.b,  arfa)
         
 if __name__ == "__main__":
     import sys

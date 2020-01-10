@@ -24,8 +24,25 @@ class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
         self.setupUi(self)
         self.widget.setVisible(False)
         self.setWindowIcon(QIcon('./image/icon.png')) 
-        self.a = 0.8
-        self.b = 0.2
+        self.a = 0.75
+        self.b = 0.7
+        self.radioButton_few.toggled.connect(self.clean)
+        self.radioButton_one.toggled.connect(self.showitems)
+
+        
+    def clean(self):
+        self.label.hide()
+        self.doubleSpinBox_arfa.hide()
+        self.pushButton_quantile_plot.hide()
+        self.lineEdit_quantile.hide()
+        self.pushButton_quantile.hide()
+        
+    def showitems(self):
+        self.label.show()
+        self.doubleSpinBox_arfa.show()
+        self.pushButton_quantile_plot.show()
+        self.lineEdit_quantile.show()
+        self.pushButton_quantile.show()
     
     def paintEvent(self,event):
         painter = QPainter(self)
@@ -65,9 +82,7 @@ class Sd_chi_Form(QWidget, Ui_Sd_chi_Form):
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
             self.widget.mpl.start_chi_plot(chi_n)
-        self.widget.mpl.fill_chi_plot(chi_n, quantile,  self.a,  self.b)
-        self.a -= 0.05
-        self.b += 0.05
+        self.widget.mpl.fill_chi_plot(chi_n, quantile,  self.a,  self.b, arfa)
         
 if __name__ == "__main__":
     import sys
