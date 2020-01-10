@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\Sd_SingleNormal.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\Sd_SingleNormal.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Sd_SingleNormal_Form(object):
     def setupUi(self, Sd_SingleNormal_Form):
@@ -88,8 +90,8 @@ class Ui_Sd_SingleNormal_Form(object):
         self.pushButton.setText(_translate("Sd_SingleNormal_Form", "方差已知时，样本均值的分布"))
         self.pushButton_2.setText(_translate("Sd_SingleNormal_Form", "方差未知时，样本均值的分布"))
         self.pushButton_3.setText(_translate("Sd_SingleNormal_Form", "样本方差的抽样分布"))
-
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -99,4 +101,3 @@ if __name__ == "__main__":
     ui.setupUi(Sd_SingleNormal_Form)
     Sd_SingleNormal_Form.show()
     sys.exit(app.exec_())
-

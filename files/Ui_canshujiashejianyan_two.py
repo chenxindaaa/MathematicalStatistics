@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\files\canshujiashejianyan_two.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\canshujiashejianyan_two.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Supposetwo(object):
     def setupUi(self, Supposetwo):
@@ -15,13 +17,13 @@ class Ui_Supposetwo(object):
         self.centralwidget = QtWidgets.QWidget(Supposetwo)
         self.centralwidget.setObjectName("centralwidget")
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(370, 20, 251, 31))
+        self.pushButton.setGeometry(QtCore.QRect(760, 30, 211, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.widget = Plot(self.centralwidget)
-        self.widget.setGeometry(QtCore.QRect(350, 120, 731, 461))
+        self.widget.setGeometry(QtCore.QRect(350, 80, 731, 501))
         self.widget.setObjectName("widget")
         self.layoutWidget = QtWidgets.QWidget(self.centralwidget)
         self.layoutWidget.setGeometry(QtCore.QRect(30, 20, 271, 341))
@@ -246,27 +248,20 @@ class Ui_Supposetwo(object):
         self.lineEdit_10.setMaxLength(5)
         self.lineEdit_10.setObjectName("lineEdit_10")
         self.horizontalLayout_4.addWidget(self.lineEdit_10)
-        self.pushButton_3 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_3.setGeometry(QtCore.QRect(370, 60, 251, 31))
+        self.comboBox = QtWidgets.QComboBox(self.centralwidget)
+        self.comboBox.setGeometry(QtCore.QRect(470, 30, 211, 31))
         font = QtGui.QFont()
+        font.setFamily("Agency FB")
         font.setPointSize(12)
-        self.pushButton_3.setFont(font)
-        self.pushButton_3.setObjectName("pushButton_3")
-        self.pushButton_4 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_4.setGeometry(QtCore.QRect(800, 60, 251, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.pushButton_4.setFont(font)
-        self.pushButton_4.setObjectName("pushButton_4")
-        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_2.setGeometry(QtCore.QRect(800, 20, 251, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setObjectName("pushButton_2")
+        self.comboBox.setFont(font)
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
         Supposetwo.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Supposetwo)
-        self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 26))
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 1128, 22))
         self.menubar.setObjectName("menubar")
         Supposetwo.setMenuBar(self.menubar)
         self.statusbar = QtWidgets.QStatusBar(Supposetwo)
@@ -279,7 +274,7 @@ class Ui_Supposetwo(object):
     def retranslateUi(self, Supposetwo):
         _translate = QtCore.QCoreApplication.translate
         Supposetwo.setWindowTitle(_translate("Supposetwo", "两个正态总体的参数假设检验"))
-        self.pushButton.setText(_translate("Supposetwo", "均值检验（容量相等）"))
+        self.pushButton.setText(_translate("Supposetwo", "假设检验结果及图像"))
         self.label_8.setText(_translate("Supposetwo", "样本A容量"))
         self.label_12.setText(_translate("Supposetwo", "样本B容量"))
         self.label_6.setText(_translate("Supposetwo", "样本A均值"))
@@ -291,11 +286,12 @@ class Ui_Supposetwo(object):
         self.label_3.setText(_translate("Supposetwo", "统计量临界值"))
         self.label_9.setText(_translate("Supposetwo", "统计量观察值"))
         self.label_10.setText(_translate("Supposetwo", "统计量临界值"))
-        self.pushButton_3.setText(_translate("Supposetwo", "方差检验（相等）"))
-        self.pushButton_4.setText(_translate("Supposetwo", "方差检验（比较）"))
-        self.pushButton_2.setText(_translate("Supposetwo", "均值检验（方差相等）"))
-
+        self.comboBox.setItemText(0, _translate("Supposetwo", "均值检验（容量相等）"))
+        self.comboBox.setItemText(1, _translate("Supposetwo", "均值检验（方差相等）"))
+        self.comboBox.setItemText(2, _translate("Supposetwo", "方差检验（相等）"))
+        self.comboBox.setItemText(3, _translate("Supposetwo", "方差检验（比较）"))
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -305,4 +301,3 @@ if __name__ == "__main__":
     ui.setupUi(Supposetwo)
     Supposetwo.show()
     sys.exit(app.exec_())
-

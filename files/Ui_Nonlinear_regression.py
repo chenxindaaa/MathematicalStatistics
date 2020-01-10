@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\hehuibin\Desktop\MathematicalStatistics\Nonlinear_regression.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\Nonlinear_regression.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Nonlinear_regression_Form(object):
     def setupUi(self, Nonlinear_regression_Form):
@@ -120,8 +122,8 @@ class Ui_Nonlinear_regression_Form(object):
         self.label_8.setText(_translate("Nonlinear_regression_Form", "相关指数R"))
         self.label_10.setText(_translate("Nonlinear_regression_Form", "检验结果"))
         self.label_7.setText(_translate("Nonlinear_regression_Form", "默认显著性水准(0.01)"))
-
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -131,4 +133,3 @@ if __name__ == "__main__":
     ui.setupUi(Nonlinear_regression_Form)
     Nonlinear_regression_Form.show()
     sys.exit(app.exec_())
-

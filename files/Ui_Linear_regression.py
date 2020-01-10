@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\hehuibin\Desktop\MathematicalStatistics\Linear_regression.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\Linear_regression.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Linear_regression_Form(object):
     def setupUi(self, Linear_regression_Form):
@@ -185,8 +187,8 @@ class Ui_Linear_regression_Form(object):
         self.label_7.setText(_translate("Linear_regression_Form", "F值"))
         self.label_8.setText(_translate("Linear_regression_Form", "临界值"))
         self.label_9.setText(_translate("Linear_regression_Form", "检验结果"))
-
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -196,4 +198,3 @@ if __name__ == "__main__":
     ui.setupUi(Linear_regression_Form)
     Linear_regression_Form.show()
     sys.exit(app.exec_())
-

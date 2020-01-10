@@ -22,9 +22,9 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>20</y>
-     <width>291</width>
+     <x>250</x>
+     <y>90</y>
+     <width>161</width>
      <height>31</height>
     </rect>
    </property>
@@ -34,60 +34,24 @@
     </font>
    </property>
    <property name="text">
-    <string>均值差的区间估计（方差已知）</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>780</x>
-     <y>20</y>
-     <width>291</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>方差比的区间估计</string>
+    <string>计算置信区间</string>
    </property>
   </widget>
   <widget class="Plot" name="widget" native="true">
    <property name="geometry">
     <rect>
-     <x>430</x>
-     <y>130</y>
-     <width>661</width>
-     <height>521</height>
+     <x>450</x>
+     <y>100</y>
+     <width>641</width>
+     <height>551</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>409</x>
-     <y>20</y>
-     <width>291</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>均值差的区间估计（方差未知）</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>390</y>
+     <x>30</x>
+     <y>400</y>
      <width>371</width>
      <height>41</height>
     </rect>
@@ -191,8 +155,8 @@
   <widget class="QPushButton" name="pushButton_7">
    <property name="geometry">
     <rect>
-     <x>340</x>
-     <y>70</y>
+     <x>310</x>
+     <y>30</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -209,8 +173,8 @@
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>490</x>
-     <y>80</y>
+     <x>460</x>
+     <y>30</y>
      <width>201</width>
      <height>21</height>
     </rect>
@@ -223,12 +187,15 @@
    <property name="text">
     <string>样本X频率直方图</string>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>40</x>
-     <y>70</y>
+     <x>20</x>
+     <y>30</y>
      <width>271</width>
      <height>31</height>
     </rect>
@@ -238,7 +205,7 @@
    <property name="geometry">
     <rect>
      <x>930</x>
-     <y>80</y>
+     <y>30</y>
      <width>161</width>
      <height>21</height>
     </rect>
@@ -255,8 +222,8 @@
   <widget class="QRadioButton" name="radioButton_5">
    <property name="geometry">
     <rect>
-     <x>710</x>
-     <y>80</y>
+     <x>700</x>
+     <y>30</y>
      <width>201</width>
      <height>21</height>
     </rect>
@@ -270,12 +237,12 @@
     <string>样本Y频率直方图</string>
    </property>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>140</y>
-     <width>381</width>
+     <y>150</y>
+     <width>416</width>
      <height>221</height>
     </rect>
    </property>
@@ -309,13 +276,16 @@
         </property>
        </widget>
       </item>
-      <item row="1" column="2">
-       <widget class="QSpinBox" name="spinBox">
-        <property name="minimum">
-         <number>1</number>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
         </property>
-        <property name="maximum">
-         <number>999999999</number>
+        <property name="text">
+         <string>样本X</string>
         </property>
        </widget>
       </item>
@@ -339,6 +309,26 @@
         </property>
        </widget>
       </item>
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_13">
+        <property name="text">
+         <string>样本方差</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="2">
+       <widget class="QLineEdit" name="lineEdit_4">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="2">
        <widget class="QDoubleSpinBox" name="doubleSpinBox_2">
         <property name="sizePolicy">
@@ -359,36 +349,13 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="label_13">
-        <property name="text">
-         <string>样本方差</string>
+      <item row="1" column="2">
+       <widget class="QSpinBox" name="spinBox">
+        <property name="minimum">
+         <number>1</number>
         </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>样本X</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="2">
-       <widget class="QLineEdit" name="lineEdit_4">
-        <property name="enabled">
-         <bool>false</bool>
-        </property>
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
+        <property name="maximum">
+         <number>999999999</number>
         </property>
        </widget>
       </item>
@@ -515,6 +482,52 @@
      </layout>
     </item>
    </layout>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>90</y>
+     <width>171</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::WheelFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtBottom</enum>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>均值差（方差已知）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>均值差（方差未知）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>方差比</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <customwidgets>

@@ -16,9 +16,9 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>40</x>
+     <x>950</x>
      <y>20</y>
-     <width>291</width>
+     <width>141</width>
      <height>31</height>
     </rect>
    </property>
@@ -28,35 +28,17 @@
     </font>
    </property>
    <property name="text">
-    <string>均值的区间估计（方差已知）</string>
+    <string>计算置信区间</string>
    </property>
   </widget>
   <widget class="Plot" name="widget" native="true">
    <property name="geometry">
     <rect>
      <x>340</x>
-     <y>130</y>
+     <y>90</y>
      <width>751</width>
-     <height>521</height>
+     <height>561</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton_2">
-   <property name="geometry">
-    <rect>
-     <x>780</x>
-     <y>20</y>
-     <width>291</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>方差的区间估计</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">
@@ -361,24 +343,6 @@
     </item>
    </layout>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
-   <property name="geometry">
-    <rect>
-     <x>409</x>
-     <y>20</y>
-     <width>291</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>均值的区间估计（方差未知）</string>
-   </property>
-  </widget>
   <widget class="QWidget" name="layoutWidget_2">
    <property name="geometry">
     <rect>
@@ -478,8 +442,8 @@
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>70</y>
+     <x>320</x>
+     <y>20</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -496,9 +460,9 @@
   <widget class="QRadioButton" name="radioButton">
    <property name="geometry">
     <rect>
-     <x>760</x>
-     <y>70</y>
-     <width>161</width>
+     <x>660</x>
+     <y>20</y>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
@@ -510,12 +474,15 @@
    <property name="text">
     <string>频率直方图</string>
    </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
   </widget>
   <widget class="QLineEdit" name="lineEdit">
    <property name="geometry">
     <rect>
-     <x>300</x>
-     <y>70</y>
+     <x>20</x>
+     <y>20</y>
      <width>281</width>
      <height>31</height>
     </rect>
@@ -524,9 +491,9 @@
   <widget class="QRadioButton" name="radioButton_2">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>70</y>
-     <width>161</width>
+     <x>810</x>
+     <y>20</y>
+     <width>121</width>
      <height>31</height>
     </rect>
    </property>
@@ -538,6 +505,52 @@
    <property name="text">
     <string>样本分布图</string>
    </property>
+  </widget>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>470</x>
+     <y>20</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Agency FB</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::WheelFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::DefaultContextMenu</enum>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="insertPolicy">
+    <enum>QComboBox::InsertAtBottom</enum>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>均值（方差已知）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>均值（方差未知）</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>方差</string>
+    </property>
+   </item>
   </widget>
  </widget>
  <customwidgets>

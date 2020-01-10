@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\Sd_t.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\Sd_t.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Sd_t_Form(object):
     def setupUi(self, Sd_t_Form):
@@ -91,8 +93,8 @@ class Ui_Sd_t_Form(object):
         self.label_3.setText(_translate("Sd_t_Form", "输入α值"))
         self.pushButton_t_quantile_plot.setText(_translate("Sd_t_Form", "显示分位点图像"))
         self.pushButton_t_quantile.setText(_translate("Sd_t_Form", "显示分位点"))
-
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -102,4 +104,3 @@ if __name__ == "__main__":
     ui.setupUi(Sd_t_Form)
     Sd_t_Form.show()
     sys.exit(app.exec_())
-

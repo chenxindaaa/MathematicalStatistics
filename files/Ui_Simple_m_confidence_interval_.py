@@ -1,32 +1,28 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\files\Simple_m_confidence_interval_.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\Simple_m_confidence_interval_.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Simple_m_confidence_interval_Form(object):
     def setupUi(self, Simple_m_confidence_interval_Form):
         Simple_m_confidence_interval_Form.setObjectName("Simple_m_confidence_interval_Form")
         Simple_m_confidence_interval_Form.resize(1128, 683)
         self.pushButton = QtWidgets.QPushButton(Simple_m_confidence_interval_Form)
-        self.pushButton.setGeometry(QtCore.QRect(40, 20, 291, 31))
+        self.pushButton.setGeometry(QtCore.QRect(950, 20, 141, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton.setFont(font)
         self.pushButton.setObjectName("pushButton")
         self.widget = Plot(Simple_m_confidence_interval_Form)
-        self.widget.setGeometry(QtCore.QRect(340, 130, 751, 521))
+        self.widget.setGeometry(QtCore.QRect(340, 90, 751, 561))
         self.widget.setObjectName("widget")
-        self.pushButton_2 = QtWidgets.QPushButton(Simple_m_confidence_interval_Form)
-        self.pushButton_2.setGeometry(QtCore.QRect(780, 20, 291, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.pushButton_2.setFont(font)
-        self.pushButton_2.setObjectName("pushButton_2")
         self.layoutWidget = QtWidgets.QWidget(Simple_m_confidence_interval_Form)
         self.layoutWidget.setGeometry(QtCore.QRect(20, 600, 281, 41))
         self.layoutWidget.setObjectName("layoutWidget")
@@ -211,12 +207,6 @@ class Ui_Simple_m_confidence_interval_Form(object):
         self.label_6.setFont(font)
         self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 2, 0, 1, 1)
-        self.pushButton_3 = QtWidgets.QPushButton(Simple_m_confidence_interval_Form)
-        self.pushButton_3.setGeometry(QtCore.QRect(409, 20, 291, 31))
-        font = QtGui.QFont()
-        font.setPointSize(12)
-        self.pushButton_3.setFont(font)
-        self.pushButton_3.setObjectName("pushButton_3")
         self.layoutWidget_2 = QtWidgets.QWidget(Simple_m_confidence_interval_Form)
         self.layoutWidget_2.setGeometry(QtCore.QRect(20, 540, 281, 41))
         self.layoutWidget_2.setObjectName("layoutWidget_2")
@@ -272,26 +262,42 @@ class Ui_Simple_m_confidence_interval_Form(object):
         self.lineEdit_3.setObjectName("lineEdit_3")
         self.horizontalLayout_3.addWidget(self.lineEdit_3)
         self.pushButton_4 = QtWidgets.QPushButton(Simple_m_confidence_interval_Form)
-        self.pushButton_4.setGeometry(QtCore.QRect(610, 70, 111, 31))
+        self.pushButton_4.setGeometry(QtCore.QRect(320, 20, 111, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.pushButton_4.setFont(font)
         self.pushButton_4.setObjectName("pushButton_4")
         self.radioButton = QtWidgets.QRadioButton(Simple_m_confidence_interval_Form)
-        self.radioButton.setGeometry(QtCore.QRect(760, 70, 161, 31))
+        self.radioButton.setGeometry(QtCore.QRect(660, 20, 121, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.radioButton.setFont(font)
+        self.radioButton.setChecked(True)
         self.radioButton.setObjectName("radioButton")
         self.lineEdit = QtWidgets.QLineEdit(Simple_m_confidence_interval_Form)
-        self.lineEdit.setGeometry(QtCore.QRect(300, 70, 281, 31))
+        self.lineEdit.setGeometry(QtCore.QRect(20, 20, 281, 31))
         self.lineEdit.setObjectName("lineEdit")
         self.radioButton_2 = QtWidgets.QRadioButton(Simple_m_confidence_interval_Form)
-        self.radioButton_2.setGeometry(QtCore.QRect(930, 70, 161, 31))
+        self.radioButton_2.setGeometry(QtCore.QRect(810, 20, 121, 31))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.radioButton_2.setFont(font)
         self.radioButton_2.setObjectName("radioButton_2")
+        self.comboBox = QtWidgets.QComboBox(Simple_m_confidence_interval_Form)
+        self.comboBox.setGeometry(QtCore.QRect(470, 20, 151, 31))
+        font = QtGui.QFont()
+        font.setFamily("Agency FB")
+        font.setPointSize(12)
+        self.comboBox.setFont(font)
+        self.comboBox.setFocusPolicy(QtCore.Qt.WheelFocus)
+        self.comboBox.setContextMenuPolicy(QtCore.Qt.DefaultContextMenu)
+        self.comboBox.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.comboBox.setInsertPolicy(QtWidgets.QComboBox.InsertAtBottom)
+        self.comboBox.setFrame(True)
+        self.comboBox.setObjectName("comboBox")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
+        self.comboBox.addItem("")
 
         self.retranslateUi(Simple_m_confidence_interval_Form)
         QtCore.QMetaObject.connectSlotsByName(Simple_m_confidence_interval_Form)
@@ -299,8 +305,7 @@ class Ui_Simple_m_confidence_interval_Form(object):
     def retranslateUi(self, Simple_m_confidence_interval_Form):
         _translate = QtCore.QCoreApplication.translate
         Simple_m_confidence_interval_Form.setWindowTitle(_translate("Simple_m_confidence_interval_Form", "单个正态总体区间估计"))
-        self.pushButton.setText(_translate("Simple_m_confidence_interval_Form", "均值的区间估计（方差已知）"))
-        self.pushButton_2.setText(_translate("Simple_m_confidence_interval_Form", "方差的区间估计"))
+        self.pushButton.setText(_translate("Simple_m_confidence_interval_Form", "计算置信区间"))
         self.label_9.setText(_translate("Simple_m_confidence_interval_Form", "方差的区间估计"))
         self.label_7.setText(_translate("Simple_m_confidence_interval_Form", "均值的区间估计"))
         self.label.setText(_translate("Simple_m_confidence_interval_Form", "请输入显著性水平α"))
@@ -309,14 +314,16 @@ class Ui_Simple_m_confidence_interval_Form(object):
         self.label_3.setText(_translate("Simple_m_confidence_interval_Form", "样本均值"))
         self.label_5.setText(_translate("Simple_m_confidence_interval_Form", "样本方差"))
         self.label_6.setText(_translate("Simple_m_confidence_interval_Form", "请输入均值"))
-        self.pushButton_3.setText(_translate("Simple_m_confidence_interval_Form", "均值的区间估计（方差未知）"))
         self.label_10.setText(_translate("Simple_m_confidence_interval_Form", "  临界值  "))
         self.label_2.setText(_translate("Simple_m_confidence_interval_Form", "  临界值  "))
         self.pushButton_4.setText(_translate("Simple_m_confidence_interval_Form", "导入样本"))
         self.radioButton.setText(_translate("Simple_m_confidence_interval_Form", "频率直方图"))
         self.radioButton_2.setText(_translate("Simple_m_confidence_interval_Form", "样本分布图"))
-
+        self.comboBox.setItemText(0, _translate("Simple_m_confidence_interval_Form", "均值（方差已知）"))
+        self.comboBox.setItemText(1, _translate("Simple_m_confidence_interval_Form", "均值（方差未知）"))
+        self.comboBox.setItemText(2, _translate("Simple_m_confidence_interval_Form", "方差"))
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -326,4 +333,3 @@ if __name__ == "__main__":
     ui.setupUi(Simple_m_confidence_interval_Form)
     Simple_m_confidence_interval_Form.show()
     sys.exit(app.exec_())
-

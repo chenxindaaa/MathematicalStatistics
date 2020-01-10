@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\Mathematical_Statistics\Myfiles\Sd_DoubleNormal.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\Sd_DoubleNormal.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_Sd_DoubleNormal_Form(object):
     def setupUi(self, Sd_DoubleNormal_Form):
@@ -121,8 +123,8 @@ class Ui_Sd_DoubleNormal_Form(object):
         self.label_4.setText(_translate("Sd_DoubleNormal_Form", "σ2"))
         self.label_7.setText(_translate("Sd_DoubleNormal_Form", "μ1"))
         self.label_3.setText(_translate("Sd_DoubleNormal_Form", "μ2"))
-
 from Plot import Plot
+
 
 if __name__ == "__main__":
     import sys
@@ -132,4 +134,3 @@ if __name__ == "__main__":
     ui.setupUi(Sd_DoubleNormal_Form)
     Sd_DoubleNormal_Form.show()
     sys.exit(app.exec_())
-

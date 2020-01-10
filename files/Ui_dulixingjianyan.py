@@ -1,12 +1,14 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\hehuibin\Desktop\MathematicalStatistics\dulixingjianyan.ui'
+# Form implementation generated from reading ui file 'C:\Users\94890\Desktop\YTfiles\Myfiles\Myfiles\files\dulixingjianyan.ui'
 #
-# Created by: PyQt5 UI code generator 5.11.3
+# Created by: PyQt5 UI code generator 5.13.2
 #
 # WARNING! All changes made in this file will be lost!
 
+
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 
 class Ui_dulixingjianyan_Form(object):
     def setupUi(self, dulixingjianyan_Form):
@@ -109,4 +111,3 @@ if __name__ == "__main__":
     ui.setupUi(dulixingjianyan_Form)
     dulixingjianyan_Form.show()
     sys.exit(app.exec_())
-
