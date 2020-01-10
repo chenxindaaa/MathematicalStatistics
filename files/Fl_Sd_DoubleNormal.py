@@ -29,9 +29,18 @@ class Sd_DoubleNormal_Form(QWidget, Ui_Sd_DoubleNormal_Form):
         pixmap = QPixmap("./image/background.png")
         #绘制窗口背景，平铺到整个窗口，随着窗口改变而改变
         painter.drawPixmap(self.rect(),pixmap)
-    
+        
     @pyqtSlot()
-    def on_pushButton_2_clicked(self):
+    def on_pushButton_4_clicked(self):
+        if self.comboBox.currentIndex() == 0:
+            self.pushButton()
+        elif self.comboBox.currentIndex() == 1:
+            self.pushButton2()
+        else:
+            self.pushButton3()
+        
+    
+    def pushButton2(self):
         """
         Slot documentation goes here.
         """
@@ -51,8 +60,7 @@ class Sd_DoubleNormal_Form(QWidget, Ui_Sd_DoubleNormal_Form):
         else:
             self.widget.mpl.start_Double_Normal_plot1(m1, n1, m2, n2,  mu1, sigma1, mu2, sigma2)
         
-    @pyqtSlot()
-    def on_pushButton_3_clicked(self):
+    def pushButton3(self):
         """
         Slot documentation goes here.
         """
@@ -74,8 +82,7 @@ class Sd_DoubleNormal_Form(QWidget, Ui_Sd_DoubleNormal_Form):
         else:
             self.widget.mpl.start_Double_Normal_plot2(m1, n1, m2, n2,  mu1, sigma1, mu2, sigma2) 
             
-    @pyqtSlot()
-    def on_pushButton_clicked(self):
+    def pushButton(self):
         """
         Slot documentation goes here.
         """

@@ -4,7 +4,7 @@
 Module implementing Sd_t_Form.
 """
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QWidget, QApplication
+from PyQt5.QtWidgets import QWidget, QApplication,  QMessageBox
 from Ui_Sd_t import Ui_Sd_t_Form
 from scipy import stats
 from PyQt5.QtGui import QIcon, QPixmap, QPainter 
@@ -20,12 +20,33 @@ class Sd_t_Form(QWidget, Ui_Sd_t_Form):
         @param parent reference to the parent widget
         @type QWidget
         """
+        self.temp = []
         super(Sd_t_Form, self).__init__(parent)
         self.setupUi(self)
         self.widget.setVisible(False)
         self.setWindowIcon(QIcon('./image/icon.png'))
-        self.a = 0.8
-        self.b = 0.2
+        self.a = 0.75
+        self.b = 0.7
+        self.radioButton_few.toggled.connect(self.clean)
+        self.radioButton_one.toggled.connect(self.showitems)
+
+        
+    def clean(self):
+        self.widget.mpl.axes.cla() 
+        self.label_3.hide()
+        self.doubleSpinBox_t_arfa.hide()
+        self.pushButton_t_quantile_plot.hide()
+        self.pushButton_t_quantile.hide()
+        self.lineEdit_t_quantile.hide()
+        self.radioButton.hide()
+        
+    def showitems(self):
+        self.label_3.show()
+        self.radioButton.show()
+        self.doubleSpinBox_t_arfa.show()
+        self.pushButton_t_quantile_plot.show()
+        self.pushButton_t_quantile.show()
+        self.lineEdit_t_quantile.show()
     
     def paintEvent(self,event):
         painter = QPainter(self)
@@ -39,10 +60,14 @@ class Sd_t_Form(QWidget, Ui_Sd_t_Form):
         Slot documentation goes here.
         """
         t_n=self.doubleSpinBox.value()
-        self.widget.setVisible(True)  
-        if self.radioButton_one.isChecked():
-            self.widget.mpl.axes.cla()
-        self.widget.mpl.start_t_plot(t_n,  self.radioButton.isChecked())
+        if t_n in self.temp and self.radioButton_few.isChecked():
+            QMessageBox.information(self, "标题", "此图已显示！", QMessageBox.Cancel)
+        else:
+            self.temp.append(t_n)
+            self.widget.setVisible(True)  
+            if self.radioButton_one.isChecked():
+                self.widget.mpl.axes.cla()
+            self.widget.mpl.start_t_plot(t_n,  self.radioButton.isChecked())
         
     @pyqtSlot()
     def on_pushButton_t_quantile_clicked(self):
@@ -65,9 +90,7 @@ class Sd_t_Form(QWidget, Ui_Sd_t_Form):
         if self.radioButton_one.isChecked():
             self.widget.mpl.axes.cla()
             self.widget.mpl.start_t_plot(t_n,  self.radioButton.isChecked())
-        self.widget.mpl.fill_t_plot(t_n, quantile, self.a, self.b)
-        self.a -= 0.05
-        self.b += 0.05
+        self.widget.mpl.fill_t_plot(t_n, quantile, self.a, self.b,  arfa)
         
 if __name__ == "__main__":
     import sys

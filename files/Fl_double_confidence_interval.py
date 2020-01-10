@@ -8,7 +8,7 @@ from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QPixmap, QPainter 
 from Ui_double_confidence_interval import Ui_double_confidence_interval_Form
-from scipy.stats import t, norm, f
+from scipy.stats import t, norm
 import numpy as np
 
 

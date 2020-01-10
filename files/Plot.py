@@ -38,11 +38,30 @@ class MyMplCanvas(FigureCanvas):
         c1 = stats.chi2.isf(0.0000001,  chi_n)
         x=np.linspace(quantile, c1, 100)
         self.axes.fill_between(x, stats.chi2.pdf(x,chi_n), alpha=0.5)
-
         arrowprops = dict(arrowstyle = "-",  color='red',  connectionstyle = "angle,angleA=5,angleB=45,rad=10")
         arrowprops1 = dict(arrowstyle = "->",  color='blue',  connectionstyle = "angle,angleA=0,angleB=45,rad=10")
         self.axes.annotate('分位点坐标：%.3f' % quantile, color='blue',  xy=(quantile, 0), xytext=(0.63,  0.2), textcoords='figure fraction' , arrowprops=arrowprops1)
         self.axes.annotate('α：%.2f' % arfa, color='red',  xy=(quantile + 1, stats.chi2.pdf(quantile+1,chi_n)/2), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
+        self.draw()
+        
+    def fill_f_plot(self, f_m, f_n,  quantile,  a,  b,  arfa):
+        x=np.linspace(quantile,7, 100 )
+        self.axes.fill_between(x, stats.f.pdf(x,f_m, f_n), alpha=0.5)
+        arrowprops = dict(arrowstyle = "-",  color='red',  connectionstyle="arc3")
+        arrowprops1 = dict(arrowstyle = "->",  color='blue',  connectionstyle = "angle,angleA=0,angleB=45,rad=10")
+        self.axes.annotate('分位点坐标：%.3f' % quantile, color='blue',  xy=(quantile, 0), xytext=(0.63,  0.2), textcoords='figure fraction' , arrowprops=arrowprops1)
+        self.axes.annotate('α：%.2f' % arfa, color='red',  xy=(quantile, stats.f.pdf(quantile, f_m, f_n)/2), xytext=(a,  b), textcoords='figure fraction' , arrowprops=arrowprops)
+        self.draw()
+        
+    def fill_t_plot(self,t_n, quantile, a,  b,  arfa):
+        x=np.linspace(quantile,5, 100 )
+        self.axes.fill_between(x, stats.t.pdf(x,t_n), alpha=0.5)
+        #arrowprops = dict(arrowstyle = "->", connectionstyle = "angle,angleA=0,angleB=45,rad=10")
+        #self.axes.annotate('%f' % quantile, xy=(quantile, 0), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
+        arrowprops = dict(arrowstyle = "-",  color='red',  connectionstyle = "arc3")
+        arrowprops1 = dict(arrowstyle = "->",  color='blue',  connectionstyle = "angle,angleA=0,angleB=45,rad=10")
+        self.axes.annotate('分位点坐标：%.3f' % quantile, color='blue',  xy=(quantile, 0), xytext=(0.63,  0.2), textcoords='figure fraction' , arrowprops=arrowprops1)
+        self.axes.annotate('α：%.2f' % arfa, color='red',  xy=(quantile, stats.t.pdf(quantile,t_n)/2), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
         self.draw()
         
     def fill_chi2_plot1(self,a,N, X):
@@ -65,13 +84,6 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.chi2.pdf(x, N),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.annotate('观察值', xy=(X, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
         self.draw()
-    
-    def fill_t_plot(self,t_n, quantile, a,  b):
-        x=np.linspace(quantile,5, 100 )
-        self.axes.fill_between(x, stats.t.pdf(x,t_n), alpha=0.5)
-        arrowprops = dict(arrowstyle = "->", connectionstyle = "angle,angleA=0,angleB=45,rad=10")
-        self.axes.annotate('%f' % quantile, xy=(quantile, 0), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
-        self.draw()
         
     def fill_t_plot1(self, a, N, T):
         p=t.ppf(a/2, N)
@@ -80,16 +92,6 @@ class MyMplCanvas(FigureCanvas):
         self.axes.fill_between(x, stats.t.pdf(x, N),x<p, x>q, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.fill_between(x, stats.t.pdf(x, N),x>q, x<p, color='dodgerblue', edgecolor='black', alpha=0.5)
         self.axes.annotate('观察值', xy=(T, 0), xytext=(0.9, 0.2), textcoords='axes fraction',arrowprops = dict(arrowstyle = "->", connectionstyle = "arc3"))
-        self.draw()
-        
-    def fill_f_plot(self, f_m, f_n,  quantile,  a,  b,  arfa):
-        x=np.linspace(quantile,7, 100 )
-        self.axes.fill_between(x, stats.f.pdf(x,f_m, f_n), alpha=0.5)
-        arrowprops = dict(arrowstyle = "-",  color='red',  connectionstyle = "angle,angleA=5,angleB=45,rad=10")
-        arrowprops1 = dict(arrowstyle = "->",  color='blue',  connectionstyle = "angle,angleA=0,angleB=45,rad=10")
-        #self.axes.annotate('%f' % quantile, xy=(quantile, 0), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
-        self.axes.annotate('分位点坐标：%.3f' % quantile, color='blue',  xy=(quantile, 0), xytext=(0.63,  0.2), textcoords='figure fraction' , arrowprops=arrowprops1)
-        self.axes.annotate('α：%.2f' % arfa, color='red',  xy=(quantile + 1, stats.f.pdf(x,f_m, f_n)/2), xytext=(a, b), textcoords='figure fraction' , arrowprops=arrowprops)
         self.draw()
         
     def fill_f_plot1(self, a, N1, N2, u):
@@ -155,7 +157,6 @@ class MyMplCanvas(FigureCanvas):
         self.draw()
         
     def start_f_plot(self,N1, N2):
-        self.axes.cla() 
         x=np.linspace(0,7,100)
         self.axes.plot(x,stats.f.pdf(x, N1, N2), label="F(%d,%d)" %(N1, N2))
         self.axes.set_xlabel('x')

@@ -30,9 +30,17 @@ class Sd_SingleNormal_Form(QWidget,Ui_Sd_SingleNormal_Form):
         pixmap = QPixmap("./image/background.png")
         #绘制窗口背景，平铺到整个窗口，随着窗口改变而改变
         painter.drawPixmap(self.rect(),pixmap)
-    
+        
     @pyqtSlot()
-    def on_pushButton_clicked(self):
+    def on_pushButton_4_clicked(self):
+        if self.comboBox.currentIndex() == 0:
+            self.pushButton()
+        elif self.comboBox.currentIndex() == 1:
+            self.pushButton2()
+        else:
+            self.pushButton3()
+    
+    def pushButton(self):
         """
         Slot documentation goes here.
         """
@@ -46,9 +54,8 @@ class Sd_SingleNormal_Form(QWidget,Ui_Sd_SingleNormal_Form):
         else:
             reply=QMessageBox.information(self, "标题", "sigma不能为零", QMessageBox.Cancel)
             print(reply)   
-            
-    @pyqtSlot()
-    def on_pushButton_2_clicked(self):
+
+    def pushButton2(self):
         """
         Slot documentation goes here.
         """
@@ -63,8 +70,7 @@ class Sd_SingleNormal_Form(QWidget,Ui_Sd_SingleNormal_Form):
             reply=QMessageBox.information(self, "标题", "sigma不能为零", QMessageBox.Cancel)
             print(reply)      
     
-    @pyqtSlot()
-    def on_pushButton_3_clicked(self):
+    def pushButton3(self):
         """
         Slot documentation goes here.
         """

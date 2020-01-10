@@ -5,7 +5,7 @@ Module implementing Form.
 """
 from scipy.stats import f
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QWidget, QApplication
+from PyQt5.QtWidgets import QWidget, QApplication , QMessageBox
 from Ui_Sd_f import Ui_Sd_f_Form
 from PyQt5.QtGui import QIcon, QPixmap, QPainter 
 
@@ -20,6 +20,8 @@ class Sd_f_Form(QWidget, Ui_Sd_f_Form):
         @param parent reference to the parent widget
         @type QWidget
         """
+        self.temp = []
+        self.temp1 = []
         super(Sd_f_Form, self).__init__(parent)
         self.setupUi(self)
         self.widget.setVisible(False)
@@ -31,6 +33,7 @@ class Sd_f_Form(QWidget, Ui_Sd_f_Form):
 
         
     def clean(self):
+        self.widget.mpl.axes.cla() 
         self.label_3.hide()
         self.doubleSpinBox_f_arfa.hide()
         self.pushButton_f_quantile_plot.hide()
@@ -57,10 +60,15 @@ class Sd_f_Form(QWidget, Ui_Sd_f_Form):
         """
         f_m=self.doubleSpinBox_f_m.value()
         f_n=self.doubleSpinBox_f_n.value()
-        self.widget.setVisible(True)   
-        if self.radioButton_one.isChecked():
-            self.widget.mpl.axes.cla()     
-        self.widget.mpl. start_f_plot(f_m, f_n)
+        if f_n in self.temp and f_m in self.temp1 and self.radioButton_few.isChecked():
+            QMessageBox.information(self, "标题", "此图已显示！", QMessageBox.Cancel)
+        else:
+            self.temp.append(f_n)
+            self.temp1.append(f_m)
+            self.widget.setVisible(True)   
+            if self.radioButton_one.isChecked():
+                self.widget.mpl.axes.cla()     
+            self.widget.mpl. start_f_plot(f_m, f_n)
         
     @pyqtSlot()
     def on_pushButton_f_quantile_clicked(self):
