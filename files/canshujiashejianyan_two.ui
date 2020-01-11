@@ -19,7 +19,7 @@
      <rect>
       <x>760</x>
       <y>30</y>
-      <width>211</width>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
@@ -66,6 +66,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>样本A容量</string>
        </property>
@@ -94,6 +100,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>样本B容量</string>
@@ -124,6 +136,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>样本A均值</string>
        </property>
@@ -149,6 +167,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>样本A方差</string>
@@ -176,6 +200,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>样本B均值</string>
        </property>
@@ -201,6 +231,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>样本B方差</string>
@@ -228,6 +264,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>检验水平α</string>
        </property>
@@ -247,6 +289,9 @@
        <property name="singleStep">
         <double>0.010000000000000</double>
        </property>
+       <property name="value">
+        <double>0.050000000000000</double>
+       </property>
       </widget>
      </item>
     </layout>
@@ -263,6 +308,12 @@
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>检验结果</string>
        </property>
@@ -301,6 +352,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>统计量临界值</string>
        </property>
@@ -336,6 +393,12 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QLabel" name="label_9">
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>统计量观察值</string>
        </property>
@@ -376,6 +439,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Agency FB</family>
+         <pointsize>11</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>统计量临界值</string>
@@ -419,9 +488,9 @@
    <widget class="QComboBox" name="comboBox">
     <property name="geometry">
      <rect>
-      <x>470</x>
+      <x>440</x>
       <y>30</y>
-      <width>211</width>
+      <width>241</width>
       <height>31</height>
      </rect>
     </property>
