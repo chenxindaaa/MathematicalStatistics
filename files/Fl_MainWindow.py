@@ -6,7 +6,7 @@ Module implementing MainWindow.
 import os
 from PyQt5.QtGui import QIcon, QPixmap, QPainter
 from PyQt5.QtCore import pyqtSlot
-from PyQt5.QtWidgets import QMainWindow, QApplication
+from PyQt5.QtWidgets import QMainWindow, QApplication,  QInputDialog
 from Fl_Sd_chi import Sd_chi_Form
 from Ui_MainWindow import Ui_MainWindow
 from Fl_Sd_t import  Sd_t_Form
@@ -105,7 +105,25 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         Slot documentation goes here.
         """
         self.Simple_m_confidence_interval=Simple_m_confidence_interval_Form()
-        self.Simple_m_confidence_interval.show()
+        value,  ok = self.do_btn15()
+        if value == "自动生成样本":
+            self.Simple_m_confidence_interval.lineEdit.hide()
+            self.Simple_m_confidence_interval.pushButton_4.hide()
+            self.Simple_m_confidence_interval.label_8.show()
+            self.Simple_m_confidence_interval.spinBox.show()
+        else:
+            self.Simple_m_confidence_interval.lineEdit.show()
+            self.Simple_m_confidence_interval.pushButton_4.show()
+            self.Simple_m_confidence_interval.label_8.hide()
+            self.Simple_m_confidence_interval.spinBox.hide()
+        if ok:
+            self.Simple_m_confidence_interval.show()
+    
+    def do_btn15(self): # 输入：选项
+    #1为默认选中选项目，True/False 列表框是否可编辑。 
+        items = ["自动生成样本", "手动导入样本"] 
+        value, ok = QInputDialog.getItem(self, "模式选择", "请选择需要的模式：:", items, 1, False) 
+        return value,  ok
         
     @pyqtSlot()
     def on_action_double_confidence_interval_triggered(self):
@@ -113,7 +131,23 @@ class Fl_MainWindow(QMainWindow, Ui_MainWindow):
         Slot documentation goes here.
         """
         self.double_confidence_interval = double_confidence_interval_Form()
-        self.double_confidence_interval.show()
+        value,  ok = self.do_btn15()
+        if value == "自动生成样本":
+            self.double_confidence_interval.lineEdit.hide()
+            self.double_confidence_interval.pushButton_7.hide()
+            self.double_confidence_interval.label_6.show()
+            self.double_confidence_interval.spinBox.show()
+            self.double_confidence_interval.label_11.show()
+            self.double_confidence_interval.spinBox_2.show()
+        else:
+            self.double_confidence_interval.lineEdit.show()
+            self.double_confidence_interval.pushButton_7.show()
+            self.double_confidence_interval.label_6.hide()
+            self.double_confidence_interval.spinBox.hide()
+            self.double_confidence_interval.label_11.hide()
+            self.double_confidence_interval.spinBox_2.hide()
+        if ok:
+            self.double_confidence_interval.show()
     
     @pyqtSlot()
     def on_action_dulixingjianyan_triggered(self):
