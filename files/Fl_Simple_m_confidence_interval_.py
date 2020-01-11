@@ -150,7 +150,7 @@ class Simple_m_confidence_interval_Form(QWidget, Ui_Simple_m_confidence_interval
             QMessageBox.information(self, "标题", "请输入正确路径！", QMessageBox.Cancel)
         else:
             QMessageBox.information(self, "标题", "导入成功！", QMessageBox.Cancel)
-        self.data = data
+            self.data = data
     
 
 if __name__ == "__main__":

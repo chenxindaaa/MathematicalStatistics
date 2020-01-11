@@ -180,7 +180,7 @@ class double_confidence_interval_Form(QWidget, Ui_double_confidence_interval_For
             QMessageBox.information(self, "标题", "请输入正确路径！", QMessageBox.Cancel)
         else:
             QMessageBox.information(self, "标题", "导入成功！", QMessageBox.Cancel)
-        self.data = data
+            self.data = data
         # TODO: not implemented yet
         
 if __name__ == "__main__":
